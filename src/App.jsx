@@ -1,12 +1,12 @@
+import React from "react";
 import "./App.css";
+import Header from "./components/header";
 
 function App() {
   return (
-    <>
-      <div className="flex bg-red-500 pt-0">
-        <h1>Nayem</h1>
-      </div>
-    </>
+    <div>
+      <Header />
+    </div>
   );
 }
 
