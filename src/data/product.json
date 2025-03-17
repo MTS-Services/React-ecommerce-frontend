@@ -1,14 +1,16 @@
 [
   {
     "id": 1,
-    "title": "iPhone 9",
-    "description": "An apple mobile which is nothing like apple",
-    "price": 549,
-    "rating": 4.69,
-    "stock": 94,
-    "brand": "Apple",
-    "category": "smartphones",
-    "thumbnail": "https://dummyjson.com/image/iid/1",
+    "name": "Organic Apples",
+    "description": "Fresh, organic apples from local farms.",
+    "price": 2.99,
+    "category": "Fruits",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
     "images": [
       "https://dummyjson.com/image/iid/1",
       "https://dummyjson.com/image/iid/2",
@@ -17,14 +19,17 @@
   },
   {
     "id": 2,
-    "title": "iPhone X",
-    "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-    "price": 899,
-    "rating": 4.44,
-    "stock": 34,
-    "brand": "Apple",
-    "category": "smartphones",
-    "thumbnail": "https://dummyjson.com/image/iid/2",
+    "name": "Whole Wheat Bread",
+    "description": "100% whole wheat, no preservatives.",
+    "price": 3.49,
+
+    "category": "Bakery",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
     "images": [
       "https://dummyjson.com/image/iid/1",
       "https://dummyjson.com/image/iid/2",
@@ -33,14 +38,17 @@
   },
   {
     "id": 3,
-    "title": "Samsung Universe 9",
-    "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-    "price": 1249,
-    "rating": 4.09,
-    "stock": 36,
-    "brand": "Samsung",
-    "category": "smartphones",
-    "thumbnail": "https://dummyjson.com/image/iid/3",
+    "name": "Almond Milk",
+    "description": "Unsweetened, 1L carton.",
+    "price": 4.99,
+
+    "category": "Dairy Alternatives",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
     "images": [
       "https://dummyjson.com/image/iid/1",
       "https://dummyjson.com/image/iid/2",
@@ -49,13 +57,320 @@
   },
   {
     "id": 4,
-    "title": "OPPOF19",
-    "description": "OPPO F19 is officially announced on April 2021.",
-    "price": 280,
+    "name": "Cage-Free Eggs",
+    "description": "12-count, cage-free eggs.",
+    "price": 5.99,
+
+    "category": "Dairy & Eggs",
+    "inStock": true,
     "rating": 4.3,
     "stock": 123,
-    "brand": "OPPO",
-    "category": "smartphones",
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Quinoa",
+    "description": "Organic, 16 oz package.",
+    "price": 6.99,
+
+    "category": "Grains & Pasta",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Fresh Spinach",
+    "description": "Pre-washed, 10 oz bag.",
+    "price": 2.49,
+
+    "category": "Vegetables",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Greek Yogurt",
+    "description": "Plain, non-fat, 32 oz.",
+    "price": 3.99,
+
+    "category": "Dairy & Eggs",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Avocados",
+    "description": "Hass avocados, 4-count pack.",
+    "price": 4.99,
+
+    "category": "Fruits",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Canned Black Beans",
+    "description": "Low sodium, 15 oz can.",
+    "price": 1.29,
+
+    "category": "Canned Goods",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Granola Bars",
+    "description": "Oats & honey, 12-count box.",
+    "price": 4.49,
+
+    "category": "Snacks",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Frozen Berries",
+    "description": "Mixed berries, 16 oz bag.",
+    "price": 5.99,
+
+    "category": "Frozen Foods",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Olive Oil",
+    "description": "Extra virgin, 500 ml bottle.",
+    "price": 8.99,
+
+    "category": "Cooking Oils",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Brown Rice",
+    "description": "Organic, 2 lb bag.",
+    "price": 3.99,
+
+    "category": "Grains & Pasta",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Tomato Sauce",
+    "description": "No added sugar, 24 oz jar.",
+    "price": 2.99,
+
+    "category": "Canned Goods",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Bananas",
+    "description": "Organic, per pound.",
+    "price": 0.69,
+
+    "category": "Fruits",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Chicken Breast",
+    "description": "Boneless, skinless, 1 lb.",
+    "price": 7.99,
+
+    "category": "Meat & Seafood",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Cheddar Cheese",
+    "description": "Sharp, 8 oz block.",
+    "price": 4.49,
+
+    "category": "Dairy & Eggs",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Frozen Pizza",
+    "description": "Margherita, 12-inch.",
+    "price": 5.99,
+
+    "category": "Frozen Foods",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Peanut Butter",
+    "description": "Creamy, 16 oz jar.",
+    "price": 3.99,
+
+    "category": "Pantry Staples",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
+    "thumbnail": "https://dummyjson.com/image/iid/4",
+    "images": [
+      "https://dummyjson.com/image/iid/1",
+      "https://dummyjson.com/image/iid/2",
+      "https://dummyjson.com/image/iid/3"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Dark Chocolate",
+    "description": "70% cocoa, 3.5 oz bar.",
+    "price": 2.99,
+
+    "category": "Snacks",
+    "inStock": true,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "N/A",
+    "color": "Blue",
     "thumbnail": "https://dummyjson.com/image/iid/4",
     "images": [
       "https://dummyjson.com/image/iid/1",
