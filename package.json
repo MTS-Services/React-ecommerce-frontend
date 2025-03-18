@@ -13,7 +13,11 @@
     "@tailwindcss/vite": "^4.0.14",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+<<<<<<< HEAD
     "swiper": "^11.2.5"
+=======
+    "react-router-dom": "^7.3.0"
+>>>>>>> 2a9efb71ab41c9b4236df1a385331b6c97d25c72
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
