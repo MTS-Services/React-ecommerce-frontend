@@ -9,16 +9,14 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const products = [
   {
     id: 1,
-    image:
-      "https://img.freepik.com/premium-photo/banner-group-vegetables-minimalistic-modern-harvest-tomatoes-zucchini-squash_1048944-3078666.jpg?semt=ais_hybrid",
+    image: "/img/products/1 (1).jpg",
     title: "Exclusive Product 1",
     price: "$199",
     discountPrice: "$149",
   },
   {
     id: 2,
-    image:
-      "https://img.freepik.com/premium-photo/man-farmer-holds-vegetables-his-hands-garden-selective-focus-food_73944-19149.jpg?semt=ais_hybrid",
+    image: "/img/products/1 (1).jpg",
 
     title: "Exclusive Product 2",
     price: "$249",
@@ -26,8 +24,7 @@ const products = [
   },
   {
     id: 3,
-    image:
-      "https://img.freepik.com/premium-photo/child-is-harvesting-tomatoes-selective-focus-kid_73944-22286.jpg?semt=ais_hybrid",
+    image: "/img/products/1 (1).jpg",
 
     title: "Exclusive Product 1",
 
@@ -39,7 +36,7 @@ const products = [
 const HeroSection = () => {
   return (
     <div className="flex items-center justify-center py-10">
-      <div className="w-full max-w-6xl px-4">
+      <div className="">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
