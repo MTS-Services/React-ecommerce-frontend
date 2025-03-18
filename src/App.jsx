@@ -9,7 +9,7 @@ function App() {
   return (
     <section className="px-44">
       <Header />
-      section <CartView />
+      <CartView />
     </section>
   );
 }
