@@ -1,10 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "./herosection.css"; // Import the CSS file
 
 const products = [
   {
@@ -19,7 +19,6 @@ const products = [
     id: 2,
     image:
       "https://img.freepik.com/premium-photo/man-farmer-holds-vegetables-his-hands-garden-selective-focus-food_73944-19149.jpg?semt=ais_hybrid",
-
     title: "Exclusive Product 2",
     price: "$249",
     discountPrice: "$199",
@@ -28,9 +27,7 @@ const products = [
     id: 3,
     image:
       "https://img.freepik.com/premium-photo/child-is-harvesting-tomatoes-selective-focus-kid_73944-22286.jpg?semt=ais_hybrid",
-
-    title: "Exclusive Product 1",
-
+    title: "Exclusive Product 3",
     price: "$299",
     discountPrice: "$249",
   },
@@ -39,7 +36,7 @@ const products = [
 const HeroSection = () => {
   return (
     <div className="flex items-center justify-center py-10">
-      <div className="w-full max-w-6xl px-4">
+      <div className="w-[1340px] max-w-6xl px-4">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
@@ -56,14 +53,14 @@ const HeroSection = () => {
                   className="h-[500px] w-full bg-cover bg-center"
                   style={{ backgroundImage: `url(${product.image})` }}
                 ></div>
-                <div className="bg-opacity-70 r l-0 absolute top-1/2 w-1/2 -translate-y-1/2 transform">
+                <div className="bg-opacity-70 animate-textUp absolute top-1/2 ml-8 w-1/2 -translate-y-1/2 transform p-8">
                   <h2 className="text-[50px] font-bold text-[#FFFF]">
                     {product.title}
                   </h2>
                   <p className="mt-2 text-lg text-[#FFFF] line-through">
                     {product.price}
                   </p>
-                  <p className="font-bould text-2xl text-red-500">
+                  <p className="text-2xl font-bold text-red-500">
                     {product.discountPrice}
                   </p>
                   <div className="mt-2">
