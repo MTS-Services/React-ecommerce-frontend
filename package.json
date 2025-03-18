@@ -14,13 +14,10 @@
     "framer-motion": "^12.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
+    "swiper": "^11.2.5",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.3.0"
-=======
     "react-router-dom": "^7.3.0",
-    "react-icons": "^5.5.0",
->>>>>>> 36b58b5241be82e74e803bb3aa39065880957538
+
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

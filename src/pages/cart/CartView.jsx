@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import { FaTrash } from "react-icons/fa";
+
 
 const CartView = () => {
   return (
@@ -7,7 +9,9 @@ const CartView = () => {
       <h1 className="mb-6 text-3xl font-semibold">Cart</h1>
       <div className="flex gap-6">
         {/* Left Column: Summary */}
-        <div className="w-1/3 rounded-lg border border-gray-300 bg-[#f8f8fa] p-6">
+
+        <div className="w-1/3 rounded-lg border border-gray-300 bg-[#f8f8fa] p-4 shadow-md">
+
           <div>
             <h2 className="mb-4 text-xl font-semibold">Summary</h2>
             <h2 className="mb-4 text-xl font-semibold">Estimate Shipping</h2>
@@ -70,6 +74,7 @@ const CartView = () => {
         </div>
 
         {/* Right Column: Product Item Table */}
+
         <div className="w-2/3 space-y-2 rounded-lg p-4">
           <h2 className="mb-4 text-xl font-semibold">Your Cart Items</h2>
           <table className="w-full table-auto">
@@ -91,9 +96,11 @@ const CartView = () => {
                 <td className="px-4 py-2 text-right">
                   <button className="cursor-pointer">
                     <FaTrash className="h-5 w-5" />
+
                   </button>
                 </td>
               </tr>
+
 
               <tr className="border-b border-b-gray-200">
                 <td className="px-4 py-2 text-left">Product 2</td>
@@ -103,11 +110,13 @@ const CartView = () => {
                 <td className="px-4 py-2 text-right">
                   <button className="cursor-pointer">
                     <FaTrash className="h-5 w-5" />
+
                   </button>
                 </td>
               </tr>
             </tbody>
           </table>
+
 
           <div className="flex justify-between">
             <a href="#" className="cursor-pointer text-xl font-bold underline">
@@ -117,6 +126,7 @@ const CartView = () => {
               Checkout
             </button>
           </div>
+
         </div>
       </div>
     </section>
