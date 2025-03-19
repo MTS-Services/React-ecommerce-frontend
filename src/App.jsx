@@ -1,6 +1,7 @@
 import "./App.css";
 import CatagoryCart from "./component/catagoryCart/CatagoryCart";
 import HeroSection from "./component/HeroSection/HeroSection";
+import TopRated from "./component/TopRated/TopRated";
 import CartView from "./pages/cart/CartView";
 import CheckoutView from "./pages/Chekout/CheckoutView";
 
@@ -10,6 +11,7 @@ function App() {
       <HeroSection></HeroSection>
       <CatagoryCart></CatagoryCart>
       <CartView />
+      <TopRated></TopRated>
     </section>
   );
 }
