@@ -9,14 +9,16 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const products = [
   {
     id: 1,
-    image: "/img/products/1 (1).jpg",
+    image:
+      "https://img.freepik.com/premium-photo/banner-group-vegetables-minimalistic-modern-harvest-tomatoes-zucchini-squash_1048944-3078666.jpg?semt=ais_hybrid",
     title: "Exclusive Product 1",
     price: "$199",
     discountPrice: "$149",
   },
   {
     id: 2,
-    image: "/img/products/1 (1).jpg",
+    image:
+      "https://img.freepik.com/premium-photo/man-farmer-holds-vegetables-his-hands-garden-selective-focus-food_73944-19149.jpg?semt=ais_hybrid",
 
     title: "Exclusive Product 2",
     price: "$249",
@@ -24,7 +26,8 @@ const products = [
   },
   {
     id: 3,
-    image: "/img/products/1 (1).jpg",
+    image:
+      "https://img.freepik.com/premium-photo/child-is-harvesting-tomatoes-selective-focus-kid_73944-22286.jpg?semt=ais_hybrid",
 
     title: "Exclusive Product 1",
 
@@ -36,7 +39,7 @@ const products = [
 const HeroSection = () => {
   return (
     <div className="flex items-center justify-center py-10">
-      <div className="">
+      <div className="w-[1560px] px-4">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
@@ -53,7 +56,7 @@ const HeroSection = () => {
                   className="h-[500px] w-full bg-cover bg-center"
                   style={{ backgroundImage: `url(${product.image})` }}
                 ></div>
-                <div className="bg-opacity-70 r l-0 absolute top-1/2 w-1/2 -translate-y-1/2 transform">
+                <div className="bg-opacity-70 r l-0 absolute top-1/2 w-1/2 -translate-y-1/2 transform pl-12">
                   <h2 className="text-[50px] font-bold text-[#FFFF]">
                     {product.title}
                   </h2>
