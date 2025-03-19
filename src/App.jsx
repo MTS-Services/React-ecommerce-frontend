@@ -1,13 +1,18 @@
+import React from "react";
 import "./App.css";
+import Header from "./components/header";
+import Footer from "./component/Footer/Footer";
+
+import CheckoutView from "./pages/Chekout/CheckoutView";
 
 function App() {
   return (
-    <>
-      <div className="flex bg-red-500 pt-0">
-        <h1>Nayem</h1>
-      </div>
-    </>
+    <section className="">
+      <Header />
+      <CheckoutView />
+      {/* <CartView /> */}
+      <Footer />
+    </section>
   );
 }
-
 export default App;
