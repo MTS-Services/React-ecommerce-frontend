@@ -19,7 +19,7 @@ const Header = () => {
     <header className="bg-[f1e4e1] p-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex h-20 items-center">
-          <img className="h-20" src="/images/B2B.png" alt="loading" link="#" />
+          <img className="h-20" src="/img/B2B.png" alt="loading" link="#" />
         </div>
         <nav>
           <ul className="flex space-x-4 text-center font-semibold text-black">
