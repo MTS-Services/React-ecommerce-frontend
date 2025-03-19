@@ -1,12 +1,13 @@
 import React from "react";
 import "./footer.css";
 
+
 function Footer() {
   return (
     <>
       <div className="footer">
         <div className="footer_container">
-          <div className="footer_col_1 ">
+          <div className="footer_col_1">
             <img src="./image/B2B logo.png" alt="this is our logo " />
             <p>
               Grabit is the biggest market of grocery products. Get your daily
@@ -63,7 +64,7 @@ function Footer() {
           </div>
 
           <div className="footer_col_4">
-            <h4 >Account</h4>
+            <h4>Account</h4>
             <a href="">
               <p>Sign In</p>
             </a>
@@ -85,12 +86,16 @@ function Footer() {
           </div>
 
           <div className="footer_col_5">
-
             <h4>Contact</h4>
-            <a href=""><p>2548 Broaddus Maple Court,Madisonville KY 4783, USA.</p></a>
-            <a href=""><p>+00 9876543210</p></a>
-            <a href=""><p>example@email.com</p></a>
-
+            <a href="">
+              <p>2548 Broaddus Maple Court,Madisonville KY 4783, USA.</p>
+            </a>
+            <a href="">
+              <p>+00 9876543210</p>
+            </a>
+            <a href="">
+              <p>example@email.com</p>
+            </a>
           </div>
         </div>
 
@@ -101,7 +106,11 @@ function Footer() {
             </div>
             <div className="subfooter_payment">
               <img src="./image/paypal.png" alt="this is a demo " />
-              <img className="skrill" src="./image/skrill.png" alt="this is a demo " />
+              <img
+                className="skrill"
+                src="./image/skrill.png"
+                alt="this is a demo "
+              />
               <img src="./image/vissa.png" alt="this is a demo " />
               <img src="./image/visa.png" alt="this is a demo " />
             </div>
