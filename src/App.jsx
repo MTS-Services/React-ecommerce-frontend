@@ -1,23 +1,20 @@
 import React from "react";
 import "./App.css";
-import HeroSection from "./component/HeroSection/HeroSection";
-import CartView from "./pages/cart/CartView";
-import CheckoutView from "./pages/Chekout/CheckoutView";
-
 import Header from "./components/header";
-import CartView from "./pages/cart/CartView";
+import Footer from "./component/Footer/Footer";
+
 import CheckoutView from "./pages/Chekout/CheckoutView";
+import HeroSection from "./component/HeroSection/HeroSection";
+import Testing from "./component/HeroSection/testing/Testing.jsx";
 
 function App() {
   return (
-    <section className="px-44">
-
-      <HeroSection></HeroSection>
-
-
+    <section className="">
       <Header />
- <CartView />
-
+      <HeroSection></HeroSection>
+      <CheckoutView />
+      {/* <CartView /> */}
+      <Footer />
     </section>
   );
 }

@@ -39,7 +39,7 @@ const products = [
 const HeroSection = () => {
   return (
     <div className="flex items-center justify-center py-10">
-      <div className="w-full max-w-6xl px-4">
+      <div className="w-[1560px] px-4">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
@@ -56,7 +56,7 @@ const HeroSection = () => {
                   className="h-[500px] w-full bg-cover bg-center"
                   style={{ backgroundImage: `url(${product.image})` }}
                 ></div>
-                <div className="bg-opacity-70 r l-0 absolute top-1/2 w-1/2 -translate-y-1/2 transform">
+                <div className="bg-opacity-70 r l-0 absolute top-1/2 w-1/2 -translate-y-1/2 transform pl-12">
                   <h2 className="text-[50px] font-bold text-[#FFFF]">
                     {product.title}
                   </h2>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import categoriesData from "./data.json"; // Adjust the path to where your JSON file is located
+import { FaAngleDown } from "react-icons/fa";
 
 const Header = () => {
   // State to manage visibility of dropdown menus
@@ -36,7 +37,9 @@ const Header = () => {
                   onClick={() => toggleCategory(index)}
                 >
                   {category.name}
-                  <span className="ml-1">▼</span>
+                  <span className="ml-1">
+                    <FaAngleDown />
+                  </span>
                 </button>
 
                 {/* Dropdown menu for subcategories */}
