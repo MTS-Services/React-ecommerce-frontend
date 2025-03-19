@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-<<<<<<< HEAD
 import Header from "./components/header";
 
+import Footer from "./component/Footer/Footer";
 import CheckoutView from "./pages/Chekout/CheckoutView";
 
 function App() {
@@ -10,17 +10,9 @@ function App() {
     <section className="">
       <Header />
       <CheckoutView />
+      <Footer />
       {/* <CartView /> */}
     </section>
-=======
-import Footer from "./component/Footer/Footer"; 
-
-function App() {
-  return (
-    <>
-        <Footer/>
-    </>
->>>>>>> nadim
   );
 }
 
