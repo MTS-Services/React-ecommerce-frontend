@@ -121,7 +121,7 @@ const ProductCard = ({ name, description, price, oldPrice, image }) => (
 );
 
 const ProductList = () => (
-  <div className="m-50 mt-2 mb-2 grid grid-cols-1 justify-center gap-6 p-10 md:grid-cols-2 lg:grid-cols-4">
+  <div className="m-50 mt-40 mb-2 grid grid-cols-1 justify-center gap-6 p-10 md:grid-cols-2 lg:grid-cols-4">
     {products.map((product) => (
       <ProductCard key={product.id} {...product} />
     ))}
