@@ -14,7 +14,7 @@ const products = Array.from({ length: 12 }, (_, i) => ({
   img: "https://img.freepik.com/free-vector/green-vegetables-mix-white_98292-5108.jpg?semt=ais_hybrid",
 }));
 
-const TopRated = () => {
+const TrendingItems = () => {
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const TopRated = () => {
     <div>
       <div className="flex items-center justify-between py-4">
         <h2 className="text-2xl font-bold">
-          Top Rated <span className="text-green-400">Items</span>
+          Trending <span className="text-green-400">Items</span>
         </h2>
         {/* Arrow Buttons */}
         <div className="flex gap-2">
@@ -174,4 +174,4 @@ const TopRated = () => {
   );
 };
 
-export default TopRated;
+export default TrendingItems;

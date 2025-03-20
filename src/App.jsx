@@ -7,6 +7,7 @@ import CartView from "./pages/cart/CartView";
 import CheckoutView from "./pages/Chekout/CheckoutView";
 import Footer from "./component/Footer/Footer";
 import Header from "./components/header";
+import FastSell from "./component/FastSell/FastSell";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       <HeroSection></HeroSection>
       <CatagoryCart></CatagoryCart>
       <CartView />
-      <TopRated></TopRated>
+      {/* <TopRated></TopRated> */}
+      <FastSell></FastSell>
+
       <Footer />
     </section>
   );
