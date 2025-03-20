@@ -2,15 +2,13 @@ import React from "react";
 import "./App.css";
 import Header from "./components/header";
 import Footer from "./component/Footer/Footer";
-
-import CheckoutView from "./pages/Chekout/CheckoutView";
+import ProductCard from "./components/ProductCard";
 
 function App() {
   return (
     <section className="">
       <Header />
-      <CheckoutView />
-      {/* <CartView /> */}
+      <ProductCard />
       <Footer />
     </section>
   );
