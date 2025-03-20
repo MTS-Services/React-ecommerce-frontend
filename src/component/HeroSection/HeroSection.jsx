@@ -53,7 +53,7 @@ const HeroSection = () => {
                   className="h-[500px] w-full bg-cover bg-center"
                   style={{ backgroundImage: `url(${product.image})` }}
                 ></div>
-                <div className="bg-opacity-70 animate-textUp absolute top-1/2 ml-8 w-1/2 -translate-y-1/2 transform p-8">
+                <div className="bg-opacity-70 r l-0 absolute top-1/2 w-1/2 -translate-y-1/2 transform pl-12">
                   <h2 className="text-[50px] font-bold text-[#FFFF]">
                     {product.title}
                   </h2>

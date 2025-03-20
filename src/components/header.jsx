@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import categoriesData from "./data.json"; // Adjust the path to where your JSON file is located
+import { FaAngleDown } from "react-icons/fa";
 
 const Header = () => {
   // State to manage visibility of dropdown menus
@@ -18,7 +19,7 @@ const Header = () => {
     <header className="bg-[f1e4e1] p-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex h-20 items-center">
-          <img className="h-20" src="/images/B2B.png" alt="loading" link="#" />
+          <img className="h-20" src="/img/B2B.png" alt="loading" link="#" />
         </div>
         <nav>
           <ul className="flex space-x-4 text-center font-semibold text-black">
@@ -36,7 +37,9 @@ const Header = () => {
                   onClick={() => toggleCategory(index)}
                 >
                   {category.name}
-                  <span className="ml-1">▼</span>
+                  <span className="ml-1">
+                    <FaAngleDown />
+                  </span>
                 </button>
 
                 {/* Dropdown menu for subcategories */}
