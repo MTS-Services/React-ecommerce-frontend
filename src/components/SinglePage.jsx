@@ -5,34 +5,34 @@ const ProductSinglePage = () => {
   const [selectedImage, setSelectedImage] = useState(0);
 
   const images = [
-    "/api/placeholder/400/400",
-    "/api/placeholder/400/400",
-    "/api/placeholder/400/400",
-    "/api/placeholder/400/400",
+    "/images/product1.jpg",
+    "/images/product2.jpg",
+    "/images/product3.jpg",
+    "/images/product4.jpg",
   ];
 
   const thumbnails = [
-    "/api/placeholder/80/80",
-    "/api/placeholder/80/80",
-    "/api/placeholder/80/80",
-    "/api/placeholder/80/80",
+    "/images/product1.jpg",
+    "/images/product2.jpg",
+    "/images/product3.jpg",
+    "/images/product4.jpg",
   ];
 
   const relatedProducts = [
     {
       name: "Some Snack Pack",
       rating: 4.5,
-      image: "/api/placeholder/100/100",
+      image: "/images/product5.jpg",
     },
     {
       name: "Corn Chips Pouch",
       rating: 4,
-      image: "/api/placeholder/100/100",
+      image: "/images/product6.jpg",
     },
     {
       name: "Roasted Snack",
       rating: 4.5,
-      image: "/api/placeholder/100/100",
+      image: "/images/product7.jpg",
     },
   ];
 
