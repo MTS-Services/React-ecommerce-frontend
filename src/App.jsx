@@ -3,19 +3,13 @@ import "./App.css";
 import Header from "./components/header";
 import Footer from "./component/Footer/Footer";
 
-import Footer from "./component/Footer/Footer";
-import CheckoutView from "./pages/Chekout/CheckoutView";
-import HeroSection from "./component/HeroSection/HeroSection";
-import Testing from "./component/HeroSection/testing/Testing.jsx";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <section className="">
       <Header />
-      <HeroSection></HeroSection>
-      <CheckoutView />
-      <Footer />
-      {/* <CartView /> */}
+      <Outlet />
       <Footer />
     </section>
   );
