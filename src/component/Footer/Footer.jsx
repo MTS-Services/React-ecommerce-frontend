@@ -1,6 +1,13 @@
 import React from "react";
 import "./footer.css";
-
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaLocationDot,
+  FaSquareTwitter,
+  FaWhatsapp,
+} from "react-icons/fa6";
+import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -87,15 +94,46 @@ function Footer() {
 
           <div className="footer_col_5">
             <h4>Contact</h4>
-            <a href="">
-              <p>2548 Broaddus Maple Court,Madisonville KY 4783, USA.</p>
-            </a>
-            <a href="">
-              <p>+00 9876543210</p>
-            </a>
-            <a href="">
-              <p>example@email.com</p>
-            </a>
+            <div className="footer_contact">
+              <div className="footer_address">
+                <a className="footer_icon">
+                  {" "}
+                  <FaLocationDot />
+                </a>
+                <p> 2548 Broaddus Maple Court, Madisonville KY 4783, USA.</p>
+              </div>
+
+              <div className="footer_address">
+                <a href="" className="footer_icon">
+                  {" "}
+                  <FaWhatsapp />
+                </a>
+                <p> +00 9876543210</p>
+              </div>
+
+              <div className="footer_address">
+                <a className="footer_icon">
+                  {" "}
+                  <FaEnvelope />
+                </a>
+                <p> example@email.com</p>
+              </div>
+            </div>
+
+            <div className="footer_social_icon">
+              <a href="">
+                <FaFacebookSquare />
+              </a>
+              <a href="">
+                <FaSquareTwitter />
+              </a>
+              <a href="">
+                <FaLinkedin />
+              </a>
+              <a href="">
+                <FaInstagramSquare />
+              </a>
+            </div>
           </div>
         </div>
 
