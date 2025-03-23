@@ -1,23 +1,32 @@
 import React from "react";
 import "./App.css";
-import CatagoryCart from "./component/catagoryCart/CatagoryCart";
-import HeroSection from "./component/HeroSection/HeroSection";
-import TopRated from "./component/TopRated/TopRated";
+// import HeroSection from "./components/Home/HeroSection";
+// import TopRated from "./components/Home/TopRated";
 import CartView from "./pages/cart/CartView";
-import CheckoutView from "./pages/Chekout/CheckoutView";
+// import CheckoutView from "./pages/Chekout/CheckoutView";
 import Footer from "./component/Footer/Footer";
 import Header from "./components/header";
-import FastSell from "./component/FastSell/FastSell";
+
+// import FreshFruits from "./pages/home/FreshFruits/FreshFruits";
+// import OfferBanner from "./pages/home/OfferBanner/OfferBanner";
+// import CatagoryCart from "./components/Home/CatagoryCart";
+// import FastSell from "./pages/home/FastSell/FastSell";
+import HomePage from "./pages/home/HomePage";
 
 function App() {
   return (
     <section className="px-44">
       <Header />
-      <HeroSection></HeroSection>
-      <CatagoryCart></CatagoryCart>
+      {/* <HeroSection></HeroSection>
+      <CatagoryCart />
+      <FreshFruits /> */}
+      <HomePage></HomePage>
       <CartView />
+      {/* <OfferBanner /> */}
+
       {/* <TopRated></TopRated> */}
-      <FastSell></FastSell>
+
+      {/* <FastSell></FastSell> */}
 
       <Footer />
     </section>

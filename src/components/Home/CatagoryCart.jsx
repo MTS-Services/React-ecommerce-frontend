@@ -106,7 +106,7 @@ const ProductCarousel = () => {
   }, []);
 
   return (
-    <div className="w">
+    <div className="w-[1576px] px-4">
       <div className="w-[1516px] px-4">
         <h2 className="mb-6 text-center text-2xl font-bold">
           Product Carousel
@@ -152,3 +152,5 @@ const ProductCarousel = () => {
     </div>
   );
 };
+
+export default ProductCarousel;
