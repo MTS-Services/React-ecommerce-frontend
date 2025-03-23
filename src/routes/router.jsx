@@ -11,6 +11,7 @@ import CartPage from "../pages/cart/CartPage";
 import CheckouPage from "../pages/chekout/CheckoutPage";
 import ContactPage from "../pages/contact/ConatcPage";
 import ProductsPage from "../pages/products/ProductsPage";
+import CopyCart from "../pages/cart/CopyCart";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ export const router = createBrowserRouter(
       <Route path="/about" element={<AboutPage />} />
       <Route path="/products" element={<ProductsPage />} />
       <Route path="/cart" element={<CartPage />} />
+      <Route path="/copycart" element={<CopyCart />} />
       <Route path="/checkout" element={<CheckouPage />} />
       <Route path="/contact" element={<ContactPage />} />
     </Route>,
