@@ -1,10 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "./herosection.css"; // Import the CSS file
 
 const products = [
   {
@@ -19,7 +19,6 @@ const products = [
     id: 2,
     image:
       "https://img.freepik.com/premium-photo/man-farmer-holds-vegetables-his-hands-garden-selective-focus-food_73944-19149.jpg?semt=ais_hybrid",
-
     title: "Exclusive Product 2",
     price: "$249",
     discountPrice: "$199",
@@ -28,9 +27,7 @@ const products = [
     id: 3,
     image:
       "https://img.freepik.com/premium-photo/child-is-harvesting-tomatoes-selective-focus-kid_73944-22286.jpg?semt=ais_hybrid",
-
-    title: "Exclusive Product 1",
-
+    title: "Exclusive Product 3",
     price: "$299",
     discountPrice: "$249",
   },
@@ -39,7 +36,7 @@ const products = [
 const HeroSection = () => {
   return (
     <div className="flex items-center justify-center py-10">
-      <div className="w-[1560px] px-4">
+      <div className="w-[1576px] px-4">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
@@ -63,7 +60,7 @@ const HeroSection = () => {
                   <p className="mt-2 text-lg text-[#FFFF] line-through">
                     {product.price}
                   </p>
-                  <p className="font-bould text-2xl text-red-500">
+                  <p className="text-2xl font-bold text-red-500">
                     {product.discountPrice}
                   </p>
                   <div className="mt-2">

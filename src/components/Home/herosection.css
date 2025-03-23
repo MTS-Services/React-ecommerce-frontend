@@ -1,0 +1,16 @@
+/* Animation for text */
+@keyframes textSlideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Applying the animation to the element */
+.animate-textUp {
+  animation: textSlideUp 1s ease-out forwards;
+}

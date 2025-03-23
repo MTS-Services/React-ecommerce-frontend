@@ -1,22 +1,18 @@
 import React from "react";
-import "./App.css";
-import Header from "./components/header";
-import Footer from "./component/Footer/Footer";
-
-import CheckoutView from "./pages/Chekout/CheckoutView";
-import HeroSection from "./component/HeroSection/HeroSection";
-import Testing from "./component/HeroSection/testing/Testing.jsx";
-
+import Navbar from "./layout/Navbar";
+import Footer from "./layout/Footer";
+import { Outlet } from "react-router-dom";
+import HeroSection from "./components/Testing";
+import HomePage from "./pages/home/HomePage";
+// -----------------
 function App() {
   return (
     <section className="">
-      <Header />
-      <HeroSection></HeroSection>
-      <CheckoutView />
-      {/* <CartView /> */}
+      <Navbar />
+
+      <Outlet />
       <Footer />
     </section>
   );
 }
-
 export default App;
