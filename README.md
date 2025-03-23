@@ -84,7 +84,14 @@ Must be following this structure
         - 📄 CartView.jsx
         - 📄 CartItem.jsx
         - 📄 Summary.jsx
+<<<<<<< HEAD
         
+=======
+      - 📂 home
+        - 📄 Hero_Section.jsx
+        - 📄 FAQ_Section.jsx
+        - 📄 Contact_Section.jsx
+>>>>>>> c63afa3e5d5165cda5aec62dd31ccad7d2f5d30e
       - 📂 ui
         - 📄 Button.jsx
         - 📄 Input.jsx
@@ -92,11 +99,15 @@ Must be following this structure
       - 📂 layout
         - 📄 Navbar.jsx
         - 📄 Footer.jsx
-    - 📂 pages
-      - 📄 HomePage.jsx
-      - 📄 CartPage.jsx
-      - 📄 AboutPage.jsx
-      - 📄 ContactPage.jsx
+    - 📂 Pages
+      - 📂 cart
+        - 📄 CartPage.jsx
+      - 📂 home
+        - 📄 HomePage.jsx
+      - 📂 about
+        - 📄 AboutPage.jsx
+      - 📂 contact
+        - 📄 ContactPage.jsx
     - 📂 hooks
       - 📄 useCart.js
     - 📂 context
