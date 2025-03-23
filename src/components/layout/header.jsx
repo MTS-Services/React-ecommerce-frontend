@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import categoriesData from "./data.json"; // Adjust the path to where your JSON file is located
+import categoriesData from "../data.json"; // Adjust the path to where your JSON file is located
 import { FaAngleDown } from "react-icons/fa";
 
 const Header = () => {
