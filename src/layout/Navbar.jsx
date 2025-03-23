@@ -9,6 +9,7 @@ import { CgMenuRightAlt } from "react-icons/cg";
 import { BsSearch } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
 import { BsCart3 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   // State to manage visibility of dropdown menus
@@ -129,12 +130,12 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/about"
                   className="relative block px-1 py-2 text-black transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#19B2E7] after:transition-all after:content-[''] hover:text-[#19B2E7] hover:after:w-full"
                 >
                   About
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
