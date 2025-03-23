@@ -12,7 +12,7 @@ import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 function Footer() {
   return (
     <>
-      <div className="footer">
+      <div className="footer border border-amber-200 bg-amber-50">
         <div className="footer_container">
           <div className="footer_col_1">
             <img src="./image/B2B logo.png" alt="this is our logo " />

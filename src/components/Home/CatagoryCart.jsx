@@ -106,49 +106,45 @@ const ProductCarousel = () => {
   }, []);
 
   return (
-    <div className="w-[1576px] px-4">
-      <div className="w-[1516px] px-4">
-        <h2 className="mb-6 text-center text-2xl font-bold">
-          Product Carousel
-        </h2>
-        <Swiper
-          spaceBetween={20}
-          slidesPerView={5}
-          pagination={{ clickable: true }}
-          loop
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false, // Will continue autoplay even after user interaction
-          }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 5 },
-          }}
-        >
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <div className="card w-full rounded-lg bg-[#F8F8DB] p-3 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-[#FCE3F5] hover:shadow-2xl">
-                <div className="card-body rounded-lg bg-white p-2 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl">
-                  <div className="mb-4 w-full overflow-hidden rounded-lg">
-                    <img
-                      src={product.image}
-                      alt={product.title}
-                      className="h-[60px] w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                    />
-                  </div>
-                  <h2 className="card-title text-center text-[18px] font-bold text-black transition-colors duration-300 ease-in-out hover:text-[#FF5722]">
-                    {product.title}
-                  </h2>
-                  <p className="text-center text-gray-600">
-                    {product.items} Items
-                  </p>
+    <div className="ml-[206px] w-[1500px] items-center justify-center px-4 py-20">
+      <h2 className="mb-6 text-center text-2xl font-bold">Product Carousel</h2>
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={5}
+        pagination={{ clickable: true }}
+        loop
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false, // Will continue autoplay even after user interaction
+        }}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
+        }}
+      >
+        {products.map((product) => (
+          <SwiperSlide key={product.id}>
+            <div className="card w-full rounded-lg bg-[#F8F8DB] p-3 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-[#FCE3F5] hover:shadow-2xl">
+              <div className="card-body rounded-lg bg-white p-2 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl">
+                <div className="mb-4 w-full overflow-hidden rounded-lg">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="h-[60px] w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                  />
                 </div>
+                <h2 className="card-title text-center text-[18px] font-bold text-black transition-colors duration-300 ease-in-out hover:text-[#FF5722]">
+                  {product.title}
+                </h2>
+                <p className="text-center text-gray-600">
+                  {product.items} Items
+                </p>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

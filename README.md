@@ -84,6 +84,7 @@ Must be following this structure
         - 📄 CartView.jsx
         - 📄 CartItem.jsx
         - 📄 Summary.jsx
+        
       - 📂 ui
         - 📄 Button.jsx
         - 📄 Input.jsx
