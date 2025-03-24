@@ -2,8 +2,8 @@ const LatestBlog = () => {
   const blogs = [
     {
       date: "March 23, 2025",
-      category: "Technology",
-      title: "The Future of AI in Web Development",
+      category: "Organic",
+      title: "marketing Guide:  5 steps to Success to way.",
       description:
         "Discover how AI is revolutionizing the way websites are built, optimized, and maintained in the digital world.",
       image:
@@ -11,8 +11,8 @@ const LatestBlog = () => {
     },
     {
       date: "March 22, 2025",
-      category: "Business",
-      title: "Secrets to Building a Successful Startup",
+      category: "Fruits",
+      title: "Best way to solove business deal issue in  market.",
       description:
         "Explore the key factors that determine the success of a startup and how to scale your business effectively.",
       image:
@@ -20,8 +20,8 @@ const LatestBlog = () => {
     },
     {
       date: "March 21, 2025",
-      category: "Photography",
-      title: "Mastering the Art of Dramatic Photography",
+      category: "Vegetables",
+      title: "31 Grecer customer service stats know in 2019.",
       description:
         "Learn the secrets behind capturing breathtaking and emotionally powerful images with dramatic lighting.",
       image:
@@ -29,8 +29,8 @@ const LatestBlog = () => {
     },
     {
       date: "March 20, 2025",
-      category: "Travel",
-      title: "Exploring the Most Enigmatic Destinations",
+      category: "FastFood",
+      title: "Business ideas to gro w you business traffic.",
       description:
         "Unveil the most mysterious and breathtaking places to visit in 2025 that will leave you spellbound.",
       image:
@@ -38,8 +38,8 @@ const LatestBlog = () => {
     },
     {
       date: "March 19, 2025",
-      category: "Fashion",
-      title: "The Rise of Bold & Dramatic Fashion Trends",
+      category: "Fruits",
+      title: "markieting guide: 5 Steps way ot Success.",
       description:
         "Fashion is taking a bold turn with dramatic designs, making waves on the runway and the streets.",
       image:
@@ -96,7 +96,7 @@ const LatestBlog = () => {
 
                 <div>
                   <h2 className="upercaus text-[16px] font-bold text-[#155DFC]">
-                    Read More....
+                    Read More...
                   </h2>
                 </div>
               </div>

@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "./herosection.css"; // Import the CSS file
+import "./herosection.css"; // Custom CSS for additional styles
 
 const products = [
   {
@@ -36,11 +36,16 @@ const products = [
 const HeroSection = () => {
   return (
     <div className="mt-[180px] flex items-center justify-center">
-      <div className="w-[1500px] px-4">
+      <div className="w-full max-w-[1500px] px-4">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 1 },
+            1024: { slidesPerView: 1 },
+          }}
           navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -48,23 +53,23 @@ const HeroSection = () => {
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="relative flex items-center overflow-hidden rounded-lg bg-white shadow-md">
+              <div className="relative flex h-auto min-h-[300px] items-center justify-center overflow-hidden rounded-lg bg-white shadow-md">
                 <div
                   className="h-[500px] w-full bg-cover bg-center"
                   style={{ backgroundImage: `url(${product.image})` }}
                 ></div>
-                <div className="bg-opacity-70 r l-0 absolute top-1/2 w-1/2 -translate-y-1/2 transform pl-12">
-                  <h2 className="text-[50px] font-bold text-[#FFFF]">
+                <div className="animate-fadeUp absolute top-1/2 left-5 w-[90%] -translate-y-1/2 transform md:w-1/2">
+                  <h2 className="text-[30px] font-bold text-white md:text-[50px]">
                     {product.title}
                   </h2>
-                  <p className="mt-2 text-lg text-[#FFFF] line-through">
+                  <p className="mt-2 text-lg text-white line-through">
                     {product.price}
                   </p>
                   <p className="text-2xl font-bold text-red-500">
                     {product.discountPrice}
                   </p>
-                  <div className="mt-2">
-                    <button className="w-[30%] rounded-md border-r-4 border-b-4 border-[#008DBD] bg-blue-600 py-2 font-semibold text-[#00000] transition hover:bg-blue-700">
+                  <div className="mt-4">
+                    <button className="w-full rounded-md border-r-4 border-b-4 border-[#008DBD] bg-blue-600 py-2 font-semibold text-white transition hover:bg-blue-700 md:w-[30%]">
                       Shop Now
                     </button>
                   </div>
