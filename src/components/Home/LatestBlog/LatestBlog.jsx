@@ -47,15 +47,15 @@ const LatestBlog = () => {
     },
   ];
 
-  // Function to handle adding the blog to cart (for now it just logs the action)
-  const handleAddToCart = (title) => {
-    console.log(`${title} added to the cart`);
-  };
+  // // Function to handle adding the blog to cart (for now it just logs the action)
+  // const handleAddToCart = (title) => {
+  //   console.log(`${title} added to the cart`);
+  // };
 
-  // Function to handle removing the blog (for now it just logs the action)
-  const handleRemove = (title) => {
-    console.log(`${title} removed`);
-  };
+  // // Function to handle removing the blog (for now it just logs the action)
+  // const handleRemove = (title) => {
+  //   console.log(`${title} removed`);
+  // };
 
   return (
     <>

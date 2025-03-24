@@ -15,7 +15,6 @@ const HomePage = () => {
       <CatagoryCart />
       <FreshFruits />
       <ProductCard2 />
-
       <OfferBanner />
       <FastSell />
       <LatestBlog></LatestBlog>
