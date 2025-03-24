@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./freshFruits.css"; // Import the styles
 
 const OfferBanner = () => {
@@ -10,17 +11,18 @@ const OfferBanner = () => {
             key={index}
             className="group relative h-[390px] overflow-hidden rounded-[6px] bg-white"
           >
+            {/* Background Image */}
             <div
               className="h-full w-full bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: `url('https://grabit-react-next.maraviyainfotech.com/assets/img/banner/${index + 1}.jpg')`,
+                backgroundImage: `url('/img/products/hero_1.jpg')`,
               }}
             >
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-[#EDEDEF] opacity-30"></div>
+              {/* Always Visible Overlay */}
+              <div className="absolute inset-0 bg-black opacity-30"></div>
 
-              {/* Shimmer Effect (Only when hovered) */}
-              <div className="shimmer-overlay group-hover:shimmer-effect absolute inset-0 bg-[#EDEDEF] opacity-30"></div>
+              {/* Hover Effect */}
+              <div className="absolute inset-0 bg-blue-800 opacity-0 transition-opacity"></div>
             </div>
 
             {/* Content inside the banner */}
@@ -31,7 +33,6 @@ const OfferBanner = () => {
                 </h2>
                 <h3 className="mt-4 text-[24px] font-extrabold text-gray-800">
                   <span className="text-[24px] font-extrabold text-green-800">
-                    {" "}
                     30% off sale
                   </span>{" "}
                   Hurry up!!!

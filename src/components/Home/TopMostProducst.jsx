@@ -6,8 +6,7 @@ const TopMostProducst = () => {
       <div
         className="relative h-[96%] w-full rounded-2xl bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('https://img.freepik.com/free-photo/vegetables-multicolored-fresh-ripe-salad-top-view-green-rustic-wooden-surface_140725-14216.jpg?semt=ais_hybrid')",
+          backgroundImage: "url('/img/products/4_12.jpg')",
         }}
       >
         {/* Darker Overlay */}
