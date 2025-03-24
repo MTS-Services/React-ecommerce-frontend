@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -54,7 +55,7 @@ const CartView = () => {
   const total = subtotal + DELIVERY_CHARGE;
 
   return (
-    <section className="p-4 lg:px-10 xl:px-44">
+    <section className="p-4 lg:px-10 lg:pt-44 xl:px-44">
       <h1 className="mb-6 text-3xl font-semibold">Cart page</h1>
       {cartItems.length === 0 ? (
         <div className="flex h-60 flex-col items-center justify-center text-xl font-semibold text-gray-500">
@@ -210,15 +211,18 @@ const CartView = () => {
             </table>
 
             <div className="flex items-center justify-between">
-              <a
-                href="#"
+              <Link
+                to="/products"
                 className="cursor-pointer font-semibold text-gray-500 underline"
               >
                 Continue Shopping
-              </a>
-              <button className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600">
+              </Link>
+              <Link
+                to="/checkout"
+                className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600"
+              >
                 Checkout
-              </button>
+              </Link>
             </div>
           </div>
         </div>
