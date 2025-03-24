@@ -6,6 +6,7 @@ import FastSell from "../../components/Home/FastSell";
 import FreshFruits from "../../components/Home/FreshFruits";
 import OfferBanner from "../../components/Home/OfferBanner";
 import ProductCard2 from "../../components/ProductCard2";
+import LatestBlog from "../../components/Home/LatestBlog/LatestBlog";
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
 
       <OfferBanner />
       <FastSell />
+      <LatestBlog></LatestBlog>
     </div>
   );
 };

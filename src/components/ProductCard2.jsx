@@ -105,7 +105,7 @@ const products = [
   },
 ];
 
-const ProductCard = ({
+const ProductCard2 = ({
   name,
   description,
   price,
@@ -183,7 +183,7 @@ const ProductList = () => (
   <div className="container mx-auto mt-20 mb-2 px-4 py-8">
     <div className="m-20 mt-0 mb-0 grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
       {products.map((product) => (
-        <ProductCard key={product.id} {...product} />
+        <ProductCard2 key={product.id} {...product} />
       ))}
     </div>
   </div>
