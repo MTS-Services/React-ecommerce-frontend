@@ -17,7 +17,7 @@ const TopMostProducst = () => {
           <h1 className="text-4xl font-bold text-white">Our Top Most</h1>
           <p className="mt-2 text-2xl text-white">Products Check It Now</p>
           <div className="mt-4 w-full px-4">
-            <button className="w-[50%] rounded-md border-r-4 border-b-4 border-[#008DBD] bg-blue-600 px-4 py-2 font-semibold text-black transition hover:bg-blue-700">
+            <button className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600">
               Shop Now
             </button>
           </div>

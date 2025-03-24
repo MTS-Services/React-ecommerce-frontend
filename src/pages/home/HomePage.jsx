@@ -17,7 +17,7 @@ const HomePage = () => {
       <FreshFruits />
       <ProductCard2 />
       <OfferBanner />
-      <TakingProducts></TakingProducts>
+      <TakingProducts />
       <FastSell />
       <LatestBlog />
     </div>

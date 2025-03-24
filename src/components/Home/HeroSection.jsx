@@ -69,7 +69,7 @@ const HeroSection = () => {
                     {product.discountPrice}
                   </p>
                   <div className="mt-4">
-                    <button className="w-full rounded-md border-r-4 border-b-4 border-[#008DBD] bg-blue-600 py-2 font-semibold text-white transition hover:bg-blue-700 md:w-[30%]">
+                    <button className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600">
                       Shop Now
                     </button>
                   </div>

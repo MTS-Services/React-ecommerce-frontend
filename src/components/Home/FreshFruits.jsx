@@ -37,8 +37,8 @@ const OfferBanner = () => {
                   Hurry up!!!
                 </h3>
                 <div className="mt-4">
-                  <button className="rounded-lg bg-blue-600 px-6 py-2 text-white transition-all duration-300 hover:bg-blue-700">
-                    Buy Now
+                  <button className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600">
+                    Shop Now
                   </button>
                 </div>
               </div>
