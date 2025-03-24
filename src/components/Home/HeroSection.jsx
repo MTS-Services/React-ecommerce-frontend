@@ -35,8 +35,8 @@ const products = [
 
 const HeroSection = () => {
   return (
-    <div className="flex items-center justify-center py-10">
-      <div className="w-[1576px] px-4">
+    <div className="mt-[180px] flex items-center justify-center">
+      <div className="w-[1500px] px-4">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}

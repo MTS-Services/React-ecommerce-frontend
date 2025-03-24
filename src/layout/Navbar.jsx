@@ -11,7 +11,7 @@ import { FiUsers } from "react-icons/fi";
 import { BsCart3 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Navbar = () => {
   // State to manage visibility of dropdown menus
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -211,4 +211,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
