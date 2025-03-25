@@ -6,6 +6,8 @@ import FastSell from "../../components/Home/FastSell";
 import FreshFruits from "../../components/Home/FreshFruits";
 import OfferBanner from "../../components/Home/OfferBanner";
 import ProductCard2 from "../../components/ProductCard2";
+import LatestBlog from "../../components/Home/LatestBlog/LatestBlog";
+import TakingProducts from "../../components/Home/TakingProducts/TakingProducts";
 
 const HomePage = () => {
   return (
@@ -15,7 +17,9 @@ const HomePage = () => {
       <FreshFruits />
       <ProductCard2 />
       <OfferBanner />
+      <TakingProducts />
       <FastSell />
+      <LatestBlog />
     </div>
   );
 };
