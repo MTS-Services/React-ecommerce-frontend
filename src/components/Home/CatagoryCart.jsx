@@ -125,7 +125,7 @@ const ProductCarousel = () => {
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
-            <div className="card w-full rounded-lg bg-[#F8F8DB] p-3 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-[#FCE3F5] hover:shadow-2xl">
+            <div className="card w-full overflow-x-hidden rounded-lg bg-[#F8F8DB] p-3 shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-[#FCE3F5] hover:shadow-2xl">
               <div className="card-body rounded-lg bg-white p-2 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl">
                 <div className="mb-4 w-full overflow-hidden rounded-lg">
                   <img
