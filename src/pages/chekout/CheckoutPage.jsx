@@ -62,7 +62,7 @@ const productData = [
 
 const CheckoutView = () => {
   return (
-    <section className="p-4 lg:px-44">
+    <section className="p-4 lg:px-44 lg:pt-44">
       <h1 className="mb-6 text-3xl font-semibold">Checkout page</h1>
       <div className="space-y-4 md:space-y-6 lg:flex lg:gap-6">
         {/* Left-- Column */}
