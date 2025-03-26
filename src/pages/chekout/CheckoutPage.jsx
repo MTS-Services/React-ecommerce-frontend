@@ -51,7 +51,6 @@ const productData = [
     thumbnail: "./img/products/3_1.jpg",
   },
 ];
-
 const DELIVERY_CHARGE = 5;
 
 const CheckoutView = () => {
