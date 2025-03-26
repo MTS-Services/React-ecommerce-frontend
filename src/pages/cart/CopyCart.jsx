@@ -22,7 +22,7 @@ const products = [
 ];
 
 const DELIVERY_CHARGE = 5;
-const CartView = () => {
+const CopyCart = () => {
   const [cartItems, setCartItems] = useState(products);
 
   const incrementItemQuantity = (itemId) => {
@@ -101,4 +101,4 @@ const CartView = () => {
   );
 };
 
-export default CartView;
+export default CopyCart;
