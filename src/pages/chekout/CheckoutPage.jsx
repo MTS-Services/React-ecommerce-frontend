@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fa42Group } from "react-icons/fa6";
 import CheckoutForm from "../../components/checkout/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 // Load your Stripe public key
-const stripePromise = loadStripe("your-publishable-key-here");
+const stripePromise = loadStripe(
+  "pk_test_51R61J0CZ2kLTrYVYE9WQTKQfW3pfUXk24wvYy2ZnBiylVvfjMdCXhTPuDnFIzJhbAOG45ZC0EN45mqH5Kqsr4HPw005XK2Dm4F",
+);
 
 const productData = [
   {
@@ -14,58 +16,54 @@ const productData = [
     price: 2.99,
     category: "Fruits",
     inStock: true,
+    quantity: 2,
     rating: 4.3,
     stock: 123,
     brand: "N/A",
     color: "Blue",
-    thumbnail: "./img/products/1_1.jpg",
-    images: [
-      "./img/products/11_1.jpg",
-      "./img/products/11_1.jpg",
-      "./img/products/11_1.jpg",
-    ],
+    thumbnail: "./img/products/2_1.jpg",
   },
   {
     id: 2,
     name: "Whole Wheat Bread",
     description: "100% whole wheat, no preservatives.",
     price: 3.49,
-
     category: "Bakery",
     inStock: true,
+    quantity: 2,
     rating: 4.3,
     stock: 123,
     brand: "N/A",
     color: "Blue",
-    thumbnail: "./img/products/1_2.jpg",
-    images: [
-      "https://dummyjson.com/image/iid/1",
-      "https://dummyjson.com/image/iid/2",
-      "https://dummyjson.com/image/iid/3",
-    ],
+    thumbnail: "./img/products/2_2.jpg",
   },
   {
     id: 3,
     name: "Almond Milk",
     description: "Unsweetened, 1L carton.",
     price: 4.99,
-
     category: "Dairy Alternatives",
     inStock: true,
+    quantity: 2,
     rating: 4.3,
     stock: 123,
     brand: "N/A",
     color: "Blue",
-    thumbnail: "./img/products/6.jpg",
-    images: [
-      "https://dummyjson.com/image/iid/1",
-      "https://dummyjson.com/image/iid/2",
-      "https://dummyjson.com/image/iid/3",
-    ],
+    thumbnail: "./img/products/3_1.jpg",
   },
 ];
 
+const DELIVERY_CHARGE = 5;
+
 const CheckoutView = () => {
+  const [cartItems, setCartItems] = useState(productData);
+  const subtotal = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0,
+  );
+
+  const total = subtotal + DELIVERY_CHARGE;
+
   return (
     <section className="p-4 lg:px-44 lg:pt-44">
       <h1 className="mb-6 text-3xl font-semibold">Checkout page</h1>
@@ -85,7 +83,7 @@ const CheckoutView = () => {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <p className="text-gray-500">Sub-Total</p>
-                <p className="font-semibold text-gray-600">$45.99</p>
+                <p className="font-semibold text-gray-600">${subtotal}</p>
               </div>
               <div className="flex justify-between">
                 <p className="text-gray-500">Delivery Charges</p>
@@ -102,7 +100,7 @@ const CheckoutView = () => {
 
               <div className="mt-4 mb-6 flex justify-between text-xl font-semibold">
                 <p className="text-lg text-[#4b5966]">Total Amount</p>
-                <p className="text-lg text-[#4b5966]">$50.99</p>
+                <p className="text-lg text-[#4b5966]">${total}</p>
               </div>
 
               {/* product details */}
@@ -330,7 +328,7 @@ const CheckoutView = () => {
               Continue
             </button>
             <Elements stripe={stripePromise}>
-              <CheckoutForm />
+              <CheckoutForm total={total} />
             </Elements>
           </div>
         </div>

@@ -49,11 +49,8 @@ const CheckoutForm = ({ product, total }) => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="mx-auto max-w-lg space-y-4 rounded-lg bg-white p-6 shadow-lg"
-    >
-      <div className="rounded-md border p-4 shadow-sm">
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="">
         <label
           htmlFor="card-element"
           className="block font-medium text-gray-700"
@@ -71,7 +68,7 @@ const CheckoutForm = ({ product, total }) => {
       <button
         type="submit"
         disabled={loading}
-        className={`w-full rounded-md px-4 py-2 font-semibold text-white ${
+        className={`w-full cursor-pointer rounded-md px-4 py-2 font-semibold text-white ${
           loading ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
         } focus:ring-2 focus:ring-indigo-500 focus:outline-none`}
       >

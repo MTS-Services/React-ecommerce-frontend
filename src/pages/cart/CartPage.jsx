@@ -3,27 +3,55 @@ import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const products = [
+const productData = [
   {
     id: 1,
-    name: "Product 1",
-    price: 25.99,
+    name: "Organic Apples",
+    description: "Fresh, organic apples from local farms.",
+    price: 2.99,
+    category: "Fruits",
+    inStock: true,
     quantity: 2,
-    image: "/img/products/1_1.jpg",
+    rating: 4.3,
+    stock: 123,
+    brand: "N/A",
+    color: "Blue",
+    thumbnail: "./img/products/2_1.jpg",
   },
   {
     id: 2,
-    name: "Product 2",
-    price: 40.0,
+    name: "Whole Wheat Bread",
+    description: "100% whole wheat, no preservatives.",
+    price: 3.49,
+    category: "Bakery",
+    inStock: true,
     quantity: 1,
-    image: "/img/products/1_2.jpg",
+    rating: 4.3,
+    stock: 123,
+    brand: "N/A",
+    color: "Blue",
+    thumbnail: "./img/products/2_2.jpg",
+  },
+  {
+    id: 3,
+    name: "Almond Milk",
+    description: "Unsweetened, 1L carton.",
+    price: 4.99,
+    category: "Dairy Alternatives",
+    inStock: true,
+    quantity: 2,
+    rating: 4.3,
+    stock: 123,
+    brand: "N/A",
+    color: "Blue",
+    thumbnail: "./img/products/3_1.jpg",
   },
 ];
 
 const DELIVERY_CHARGE = 5;
 
 const CartView = () => {
-  const [cartItems, setCartItems] = useState(products);
+  const [cartItems, setCartItems] = useState(productData);
 
   const incrementItemQuantity = (itemId) => {
     setCartItems((prevItems) =>
@@ -167,7 +195,7 @@ const CartView = () => {
                   <tr key={product.id} className="border-b border-b-gray-200">
                     <td className="py- flex items-center text-left">
                       <img
-                        src={product.image}
+                        src={product.thumbnail}
                         alt={product.name}
                         className="mr-4 h-18 w-18 rounded-lg object-cover"
                       />
