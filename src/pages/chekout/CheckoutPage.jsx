@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Fa42Group } from "react-icons/fa6";
 import CheckoutForm from "../../components/checkout/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
@@ -30,7 +29,7 @@ const productData = [
     price: 3.49,
     category: "Bakery",
     inStock: true,
-    quantity: 2,
+    quantity: 1,
     rating: 4.3,
     stock: 123,
     brand: "N/A",
@@ -100,7 +99,7 @@ const CheckoutView = () => {
 
               <div className="mt-4 mb-6 flex justify-between text-xl font-semibold">
                 <p className="text-lg text-[#4b5966]">Total Amount</p>
-                <p className="text-lg text-[#4b5966]">${total}</p>
+                <p className="text-lg text-[#4b5966]">${total.toFixed(2)}</p>
               </div>
 
               {/* product details */}

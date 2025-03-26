@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
+import {
+  useStripe,
+  useElements,
+  CardNumberElement,
+  CardExpiryElement,
+  CardCvcElement,
+} from "@stripe/react-stripe-js";
 import axios from "axios";
 
 const CheckoutForm = ({ product, total }) => {
@@ -50,17 +56,23 @@ const CheckoutForm = ({ product, total }) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Card Number */}
       <div className="">
-        <label
-          htmlFor="card-element"
-          className="block font-medium text-gray-700"
-        >
-          Card details
-        </label>
-        <CardElement
-          id="card-element"
-          className="mt-2 rounded-md border border-gray-300 p-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-        />
+        <label className="block font-medium text-gray-700">Card Number</label>
+        <CardNumberElement className="mt-2 w-full rounded-md border border-gray-300 p-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+      </div>
+
+      {/* Expiry Date & CVC */}
+      <div className="grid grid-cols-2 gap-4">
+        <div className="">
+          <label className="block font-medium text-gray-700">Expiry Date</label>
+          <CardExpiryElement className="mt-2 w-full rounded-md border border-gray-300 p-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+        </div>
+
+        <div className="">
+          <label className="block font-medium text-gray-700">CVC</label>
+          <CardCvcElement className="mt-2 w-full rounded-md border border-gray-300 p-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+        </div>
       </div>
 
       {error && <div className="text-sm text-red-600">{error}</div>}
@@ -68,11 +80,11 @@ const CheckoutForm = ({ product, total }) => {
       <button
         type="submit"
         disabled={loading}
-        className={`w-full cursor-pointer rounded-md px-4 py-2 font-semibold text-white ${
+        className={`w-full rounded-md px-4 py-2 font-semibold text-white ${
           loading ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
-        } focus:ring-2 focus:ring-indigo-500 focus:outline-none`}
+        } focus:outline-none`}
       >
-        {loading ? "Processing..." : `Pay $${total}`}
+        {loading ? "Processing..." : `Pay $${total.toFixed(2)}`}
       </button>
     </form>
   );
