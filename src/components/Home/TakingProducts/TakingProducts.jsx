@@ -37,7 +37,7 @@ const TakingProducts = () => {
             key={feature.id}
             className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-md"
           >
-            <div className="mb-3 flex justify-center text-green-500">
+            <div className="mb-3 flex justify-center text-[#1E3A8A]">
               {feature.icon}
             </div>
             <h2 className="text-lg font-semibold text-gray-800">

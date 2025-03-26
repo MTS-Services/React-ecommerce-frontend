@@ -27,14 +27,12 @@ const products = [
 const HeroSection = () => {
   return (
     <div className="mt-[180px] flex items-center justify-center">
-      <div className="w-full max-w-[1500px] px-4">
+      <div className="w-full px-4 lg:max-w-[1527px]">
         <Swiper
           modules={[Navigation, Pagination, Autoplay, EffectFade]} // Added EffectFade
           effect="fade" // Enables fade transition
           spaceBetween={20}
           slidesPerView={1}
-          // navigation
-
           pagination={{
             clickable: true,
             renderBullet: (index, className) => {
@@ -50,16 +48,16 @@ const HeroSection = () => {
             <SwiperSlide key={product.id}>
               <div className="relative flex h-auto min-h-[300px] items-center justify-center overflow-hidden rounded-lg bg-white shadow-md">
                 <div
-                  className="h-[500px] w-full bg-cover bg-center transition-all duration-1000 ease-in-out"
+                  className="h-[250px] w-full bg-cover bg-center transition-all duration-1000 ease-in-out sm:h-[350px] md:h-[400px] lg:h-[500px]"
                   style={{ backgroundImage: `url(${product.image})` }}
                 ></div>
 
-                <div className="animate-fadeUp absolute top-1/2 left-12 w-[90%] -translate-y-1/2 transform px-16 md:w-1/2 lg:left-34">
-                  <p className="text-2xl font-bold text-blue-800">
+                <div className="animate-fadeUp absolute top-1/2 left-12 w-[90%] -translate-y-1/2 transform sm:px-6 md:w-1/2 md:px-8 md:pr-6 lg:left-34 lg:px-16">
+                  <p className="text-2xl font-bold text-blue-800 md:text-xl lg:text-2xl">
                     Starting at {product.discountPrice}
                   </p>
 
-                  <h2 className="text-[30px] font-bold text-[#4b5966] md:text-[50px]">
+                  <h2 className="text-[20px] leading-snug font-bold text-[#4b5966] sm:text-[24px] md:text-[30px] lg:text-[50px]">
                     {product.title}
                   </h2>
 

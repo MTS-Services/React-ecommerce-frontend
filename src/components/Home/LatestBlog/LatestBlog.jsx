@@ -59,9 +59,9 @@ const LatestBlog = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center overflow-hidden px-4 py-10">
+      <div className="flex w-full items-center justify-center overflow-hidden px-4 py-10 lg:w-[1527px]">
         <div className="text-center">
-          <h3 className="mb-4 text-3xl font-bold text-black">
+          <h3 className="mb-4 items-center text-center text-3xl font-bold text-black">
             Latest <span className="text-green-900">Blog</span>
           </h3>
           <p>We track interesting topics every day in 2023.</p>

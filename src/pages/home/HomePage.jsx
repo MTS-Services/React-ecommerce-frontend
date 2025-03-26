@@ -11,7 +11,7 @@ import TakingProducts from "../../components/Home/TakingProducts/TakingProducts"
 
 const HomePage = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <HeroSection />
       <CatagoryCart />
       <FreshFruits />

@@ -24,20 +24,20 @@ const features = [
 
 const ContactCart = () => {
   return (
-    <div className="mt-64 flex items-center justify-center bg-[#FFFF] px-4">
-      <div className="grid grid-cols-1 gap-6 px-4 hover:bg-blend-color-burn md:grid-cols-2 lg:w-[1492px] lg:grid-cols-3">
+    <div className="bg-[#FFFFw-full md:md-12 flex w-full items-center justify-center overflow-hidden pt-8 lg:mt-14">
+      <div className="grid w-full grid-cols-1 gap-6 px-4 hover:bg-blend-color-burn md:grid-cols-2 lg:w-[1527px] lg:grid-cols-3">
         {features.map((feature) => (
           <div
             key={feature.id}
             className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-md"
           >
-            <div className="mb-3 flex justify-center text-[#1447E6]">
+            <div className="= mb-3 flex justify-center text-[#1447E6]">
               {feature.icon}
             </div>
-            <h2 className="text-[20px] font-semibold text-gray-800">
+            <h2 className="= text-[20px] font-semibold text-gray-800">
               {feature.title}
             </h2>
-            <p className="text-[20px] text-gray-500">{feature.desc}</p>
+            <p className="= text-[20px] text-gray-500">{feature.desc}</p>
           </div>
         ))}
       </div>
