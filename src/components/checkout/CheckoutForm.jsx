@@ -80,7 +80,7 @@ const CheckoutForm = ({ product, total }) => {
       <button
         type="submit"
         disabled={loading}
-        className={`w-full rounded-md px-4 py-2 font-semibold text-white ${
+        className={`w-full cursor-pointer rounded-md px-4 py-2 font-semibold text-white ${
           loading ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
         } focus:outline-none`}
       >

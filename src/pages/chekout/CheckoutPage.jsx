@@ -82,7 +82,9 @@ const CheckoutView = () => {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <p className="text-gray-500">Sub-Total</p>
-                <p className="font-semibold text-gray-600">${subtotal}</p>
+                <p className="font-semibold text-gray-600">
+                  ${subtotal.toFixed(2)}
+                </p>
               </div>
               <div className="flex justify-between">
                 <p className="text-gray-500">Delivery Charges</p>
