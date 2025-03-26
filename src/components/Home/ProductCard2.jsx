@@ -179,12 +179,99 @@ const ProductCard = ({
   );
 };
 
+// Category Sidebar Component
+const CategorySidebar = () => {
+  const [categoryOpen, setCategoryOpen] = useState(true);
+  const [weightOpen, setWeightOpen] = useState(false);
+
+  // Category data
+  const categories = [
+    { name: "Dried Fruit" },
+    { name: "Cookies" },
+    { name: "Foods" },
+    { name: "Fresh Fruit" },
+    { name: "Tuber Root" },
+    { name: "Vegetables" },
+    { name: "Snacks" },
+    { name: "Unicafe" },
+    { name: "Jewellery" },
+  ];
+
+  // Weight options
+  const weightOptions = ["2kg", "5kg", "10kg", "15kg", "2pack"];
+
+  return (
+    <div className="mt-20 mb-6 rounded-lg border border-gray-200 bg-gray-50">
+      {/* Category dropdown */}
+      <div
+        className="cursor-pointer border-b border-gray-200 p-4"
+        onClick={() => setCategoryOpen(!categoryOpen)}
+      >
+        <div className="flex items-center justify-between">
+          <span className="font-medium text-gray-700">Category</span>
+          <span className="text-gray-500">{categoryOpen ? "▼" : "▶"}</span>
+        </div>
+      </div>
+
+      {categoryOpen && (
+        <div className="p-2">
+          {categories.map((category, index) => (
+            <div
+              key={index}
+              className="flex cursor-pointer items-center gap-2 p-2 hover:bg-gray-100"
+            >
+              <input type="checkbox" className="h-4 w-4" />
+              <span className="mr-2">{category.icon}</span>
+              <span className="text-gray-600">{category.name}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Weight dropdown */}
+      <div
+        className="cursor-pointer border-b border-gray-200 p-4"
+        onClick={() => setWeightOpen(!weightOpen)}
+      >
+        <div className="flex items-center justify-between">
+          <span className="font-medium text-gray-700">Weight</span>
+          <span className="text-gray-500">{weightOpen ? "▼" : "▶"}</span>
+        </div>
+      </div>
+
+      {weightOpen && (
+        <div className="p-2">
+          {weightOptions.map((weight, index) => (
+            <div
+              key={index}
+              className="flex cursor-pointer items-center gap-2 p-2 hover:bg-gray-100"
+            >
+              <input type="checkbox" className="h-4 w-4" />
+              <span className="text-gray-600">{weight}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const ProductList = () => (
-  <div className="container mx-auto mt-20 mb-2 px-4 py-8">
-    <div className="m-20 mt-0 mb-0 grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
-      {products.map((product) => (
-        <ProductCard key={product.id} {...product} />
-      ))}
+  <div className="container mx-auto mt-20 mb-2 px-1 py-6">
+    <div className="flex flex-col gap-6 lg:flex-row">
+      {/* Sidebar */}
+      <div className="w-full lg:w-1/5">
+        <CategorySidebar />
+      </div>
+
+      {/* Product Grid */}
+      <div className="w-full lg:w-4/5">
+        <div className="mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-6">
+          {products.map((product) => (
+            <ProductCard key={product.id} {...product} />
+          ))}
+        </div>
+      </div>
     </div>
   </div>
 );
