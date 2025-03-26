@@ -1,5 +1,10 @@
 import React from "react";
 import { Fa42Group } from "react-icons/fa6";
+import CheckoutForm from "../../components/checkout/CheckoutForm";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+// Load your Stripe public key
+const stripePromise = loadStripe("your-publishable-key-here");
 
 const productData = [
   {
@@ -324,6 +329,9 @@ const CheckoutView = () => {
             <button className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600">
               Continue
             </button>
+            <Elements stripe={stripePromise}>
+              <CheckoutForm />
+            </Elements>
           </div>
         </div>
       </div>
