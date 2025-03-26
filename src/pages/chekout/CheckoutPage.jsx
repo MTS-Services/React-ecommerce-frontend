@@ -51,7 +51,6 @@ const productData = [
     thumbnail: "./img/products/3_1.jpg",
   },
 ];
-
 const DELIVERY_CHARGE = 5;
 
 const CheckoutView = () => {
@@ -82,7 +81,9 @@ const CheckoutView = () => {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <p className="text-gray-500">Sub-Total</p>
-                <p className="font-semibold text-gray-600">${subtotal}</p>
+                <p className="font-semibold text-gray-600">
+                  ${subtotal.toFixed(2)}
+                </p>
               </div>
               <div className="flex justify-between">
                 <p className="text-gray-500">Delivery Charges</p>

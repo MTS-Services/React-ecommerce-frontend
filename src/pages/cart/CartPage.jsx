@@ -180,7 +180,7 @@ const CartView = () => {
               <thead className="border-b border-b-gray-200">
                 <tr>
                   <th className="px-4 py-2 text-left text-gray-500">Product</th>
-                  <th className="px-4 py-2 text-center text-gray-500">Price</th>
+
                   <th className="px-4 py-2 text-center text-gray-500">
                     Quantity
                   </th>
@@ -193,17 +193,20 @@ const CartView = () => {
               <tbody>
                 {cartItems.map((product) => (
                   <tr key={product.id} className="border-b border-b-gray-200">
-                    <td className="py- flex items-center text-left">
+                    <td className="flex items-center text-left">
                       <img
                         src={product.thumbnail}
                         alt={product.name}
                         className="mr-4 h-18 w-18 rounded-lg object-cover"
                       />
-                      {product.name}
+                      <div>
+                        <p className="">{product.name}</p>
+                        <p className="text-md font-bold">
+                          ${product.price.toFixed(2)}
+                        </p>
+                      </div>
                     </td>
-                    <td className="px-4 py-2 text-center">
-                      ${product.price.toFixed(2)}
-                    </td>
+
                     <td className="px-4 py-2 text-center">
                       <div className="flex items-center justify-center gap-2">
                         <button
