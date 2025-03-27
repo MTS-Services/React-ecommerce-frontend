@@ -1,18 +1,48 @@
-// TopRated.jsx
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Grid } from "swiper/modules";
 import { useEffect, useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/grid";
 
-// Example Product Data
-const products = Array.from({ length: 12 }, (_, i) => ({
-  id: i + 1,
-  name: `Product ${i + 1}`,
-  category: "Category",
-  price: `$${(i + 1) * 5}.00`,
-  img: "https://img.freepik.com/free-vector/green-vegetables-mix-white_98292-5108.jpg?semt=ais_hybrid",
-}));
+const products = [
+  {
+    id: 1,
+    name: "Product 1",
+    price: "$10.00",
+    img: "https://img.freepik.com/free-vector/green-vegetables-mix-white_98292-5108.jpg?semt=ais_hybrid",
+  },
+  {
+    id: 2,
+    name: "Product 2",
+    price: "$15.00",
+    img: "https://img.freepik.com/free-vector/healthy-fresh-vegetables-background_1308-121411.jpg",
+  },
+  {
+    id: 3,
+    name: "Product 3",
+    price: "$20.00",
+    img: "https://img.freepik.com/free-vector/organic-vegetables-realistic-composition_1284-17057.jpg",
+  },
+  {
+    id: 4,
+    name: "Product 4",
+    price: "$25.00",
+    img: "https://img.freepik.com/free-vector/hand-drawn-flat-design-vegetables-background_52683-43916.jpg",
+  },
+  {
+    id: 5,
+    name: "Product 5",
+    price: "$30.00",
+    img: "https://img.freepik.com/free-vector/hand-drawn-fruits-vegetables-pattern-design_23-2148656492.jpg",
+  },
+  {
+    id: 6,
+    name: "Product 6",
+    price: "$35.00",
+    img: "https://img.freepik.com/free-vector/vegetables-fruits-doodle-seamless-pattern_1284-42081.jpg",
+  },
+];
 
 const TrendingItems = () => {
   const swiperRef = useRef(null);
@@ -25,145 +55,57 @@ const TrendingItems = () => {
   }, []);
 
   return (
-    <div>
-      <div className="flex items-center justify-between py-4">
+    <div className="w-full px-4">
+      <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold">
-          Trending <span className="text-green-400">Items</span>
+          Trending <span className="text-[#1E3A8A]">Items</span>
         </h2>
         {/* Arrow Buttons */}
         <div className="flex gap-2">
-          <button className="prev-button rounded-full p-2">◀</button>
-          <button className="next-button rounded-full p-2">▶</button>
+          <button className="prev-buttonss hover:bg-[#1E3A8A]">◀</button>
+          <button className="next-buttonss hover:bg-[#1E3A8A]">▶</button>
         </div>
       </div>
 
-      {/* Swiper for products */}
+      {/* Swiper Slider */}
       <Swiper
         className="my-4"
         ref={swiperRef}
-        modules={[Navigation, Autoplay]}
+        modules={[Navigation, Autoplay, Grid]}
         navigation={{
-          prevEl: ".prev-button",
-          nextEl: ".next-button",
+          prevEl: ".prev-buttonss",
+          nextEl: ".next-buttonss",
         }}
         spaceBetween={20}
-        slidesPerView={1} // Adjust to show 3 items at once
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 1 },
-          1024: { slidesPerView: 1 },
-        }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
-      >
-        {products.map((product) => (
-          <SwiperSlide className="flex flex-col" key={product.id}>
-            <div className="bg-base-100 flex rounded-[6px] border border-gray-300 p-4">
-              <img
-                className="h-[80px] w-[80px] bg-cover"
-                src={product.img}
-                alt={product.name}
-              />
-              <div className="ml-3">
-                <h2 className="text-[18px] font-bold text-[#545454]">
-                  {product.name}
-                </h2>
-                <p className="text-[14px] text-[#545454]">{product.category}</p>
-                <div className="flex items-center gap-2">
-                  <p className="text-[20px] font-bold text-black">
-                    {product.price}
-                  </p>
-                  <p className="line-through">$50.00</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <Swiper
-        className="my-4"
-        ref={swiperRef}
-        modules={[Navigation, Autoplay]}
-        navigation={{
-          prevEl: ".prev-button",
-          nextEl: ".next-button",
-        }}
-        spaceBetween={20}
-        slidesPerView={1} // Adjust to show 3 items at once
+        grid={{ rows: 2, fill: "row" }} // ২টি রোতে দেখাবে
         breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 1 },
-          1024: { slidesPerView: 1 },
-        }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
+          320: { slidesPerView: 1, grid: { rows: 3 } }, // মোবাইলে ১ কলাম × ৩ রো
+          768: { slidesPerView: 1, grid: { rows: 3 } }, // ট্যাবলেটে ২ কলাম × ৩ রো
+          1024: { slidesPerView: 1, grid: { rows: 3 } }, // ডেস্কটপে ৩ কলাম × ৩ রো
         }}
       >
         {products.map((product) => (
-          <SwiperSlide className="flex flex-col" key={product.id}>
-            <div className="bg-base-100 flex rounded-[6px] border border-gray-300 p-4">
+          <SwiperSlide key={product.id} className="flex flex-col">
+            <div className="s flex items-center rounded-lg border border-gray-300 bg-white p-4">
               <img
-                className="h-[80px] w-[80px] bg-cover"
+                className="h-20 w-20 rounded-md object-cover"
                 src={product.img}
                 alt={product.name}
               />
               <div className="ml-3">
-                <h2 className="text-[18px] font-bold text-[#545454]">
+                <h2 className="text-lg font-bold text-gray-700">
                   {product.name}
                 </h2>
-                <p className="text-[14px] text-[#545454]">{product.category}</p>
+                <p className="text-gray-500">Category</p>
                 <div className="flex items-center gap-2">
-                  <p className="text-[20px] font-bold text-black">
+                  <p className="text-xl font-bold text-black">
                     {product.price}
                   </p>
-                  <p className="line-through">$50.00</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <Swiper
-        className="my-4"
-        ref={swiperRef}
-        modules={[Navigation, Autoplay]}
-        navigation={{
-          prevEl: ".prev-button",
-          nextEl: ".next-button",
-        }}
-        spaceBetween={20}
-        slidesPerView={1} // Adjust to show 3 items at once
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 1 },
-          1024: { slidesPerView: 1 },
-        }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-      >
-        {products.map((product) => (
-          <SwiperSlide className="flex flex-col" key={product.id}>
-            <div className="bg-base-100 flex rounded-[6px] border border-gray-300 p-4">
-              <img
-                className="h-[80px] w-[80px] bg-cover"
-                src={product.img}
-                alt={product.name}
-              />
-              <div className="ml-3">
-                <h2 className="text-[18px] font-bold text-[#545454]">
-                  {product.name}
-                </h2>
-                <p className="text-[14px] text-[#545454]">{product.category}</p>
-                <div className="flex items-center gap-2">
-                  <p className="text-[20px] font-bold text-black">
-                    {product.price}
-                  </p>
-                  <p className="line-through">$50.00</p>
+                  <p className="text-sm text-gray-500 line-through">$50.00</p>
                 </div>
               </div>
             </div>

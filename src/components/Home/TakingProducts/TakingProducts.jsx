@@ -30,7 +30,7 @@ const features = [
 
 const TakingProducts = () => {
   return (
-    <div className="flex items-center justify-center bg-[#FFFF] px-4 py-[100px]">
+    <div className="flex items-center justify-center bg-[#FFFF] px-4 pt-8 lg:py-[100px]">
       <div className="grid w-full max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature) => (
           <div
