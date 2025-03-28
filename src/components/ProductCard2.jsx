@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { FiHeart } from "react-icons/fi";
 import { IoEyeOutline } from "react-icons/io5";
 import { CiRepeat } from "react-icons/ci";
-import { RiDeleteBin6Line } from "react-icons/ri";
-import { CiStar } from "react-icons/ci";
+
 import { BsCart3 } from "react-icons/bs";
-import { MdOutlineStar, MdStarHalf, MdStarOutline } from "react-icons/md";
+import { MdOutlineStar, MdStarHalf } from "react-icons/md";
 
 const products = [
   {
@@ -73,36 +72,6 @@ const products = [
     oldPrice: 120.0,
     image: "/img/products/3.jpg",
   },
-  {
-    id: 9,
-    name: "shoes",
-    description: "Footwear",
-    price: 99.0,
-    oldPrice: 133.0,
-    image: "/img/products/3_1.jpg",
-  },
-  {
-    id: 10,
-    name: "shoes",
-    description: "Footwear",
-    price: 185.0,
-    image: "/img/products/4.jpg",
-  },
-  {
-    id: 11,
-    name: "shoes",
-    description: "Footwear",
-    price: 77.0,
-    oldPrice: 88.0,
-    image: "/img/products/5.jpg",
-  },
-  {
-    id: 12,
-    name: "shoes",
-    description: "Footwear",
-    price: 130.0,
-    image: "/img/products/5_1.jpg",
-  },
 ];
 
 const ProductCard2 = ({
@@ -117,11 +86,11 @@ const ProductCard2 = ({
 
   return (
     <div
-      className="group relative flex h-[400px] w-[290px] flex-col rounded-lg bg-[#f5f5f5] shadow transition-transform duration-300 hover:scale-105"
+      className="group relative flex flex-col rounded-lg bg-[#f5f5f5] shadow transition-transform duration-300 hover:scale-105"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-48 overflow-hidden rounded-t-lg sm:h-56 md:h-64">
+      <div className="relative h-48 cursor-pointer overflow-hidden rounded-t-lg sm:h-56 md:h-64">
         <img
           className="h-full w-full object-cover transition-opacity duration-300"
           src={isHovered && hoverImage ? hoverImage : image}
@@ -180,7 +149,8 @@ const ProductCard2 = ({
 };
 
 const ProductList = () => (
-  <div className="container mx-auto mt-44 mb-2 px-4 py-8">
+  <div className="container mx-auto mt-20 mb-2 px-4 py-8">
+    <h1 className="mb-20 text-center text-4xl font-bold">Populer Products</h1>
     <div className="m-20 mt-0 mb-0 grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
       {products.map((product) => (
         <ProductCard2 key={product.id} {...product} />
