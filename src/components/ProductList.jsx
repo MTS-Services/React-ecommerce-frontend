@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BiEdit, BiTrash } from "react-icons/bi";
+import EditProduct from "./EditProduct";
 
 const ProductList = () => {
   const [products, setProducts] = useState([
@@ -10,15 +11,38 @@ const ProductList = () => {
       price: "150$",
       category: "Food",
     },
+    {
+      id: 2,
+      image: "https://via.placeholder.com/50",
+      title: "Pizza",
+      price: "200$",
+      category: "Food",
+    },
   ]);
 
+  const [editProduct, setEditProduct] = useState(null);
+
+  // Delete product
   const handleDelete = (id) => {
-    setProducts((prev) => prev.filter((product) => product.id !== id));
+    setProducts(products.filter((product) => product.id !== id));
+  };
+
+  // Open edit form
+  const handleEdit = (product) => {
+    setEditProduct(product);
+  };
+
+  // Save updated product
+  const handleSave = (updatedProduct) => {
+    setProducts(
+      products.map((p) => (p.id === updatedProduct.id ? updatedProduct : p)),
+    );
+    setEditProduct(null);
   };
 
   return (
-    <div className="rounded bg-white shadow-md">
-      <table className="w-full">
+    <div className="rounded bg-white p-6 shadow-md">
+      <table className="w-full border-collapse">
         <thead className="border-b bg-gray-100">
           <tr>
             <th className="p-4 text-left">Image</th>
@@ -46,16 +70,28 @@ const ProductList = () => {
                   onClick={() => handleDelete(product.id)}
                   className="text-red-500 hover:text-red-700"
                 >
-                  <BiTrash size={20} />
+                  <BiTrash size={25} />
                 </button>
-                <button className="text-blue-500 hover:text-blue-700">
-                  <BiEdit size={20} />
+                <button
+                  onClick={() => handleEdit(product)}
+                  className="text-blue-500 hover:text-blue-700"
+                >
+                  <BiEdit size={25} />
                 </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      {/* Show edit form if a product is being edited */}
+      {editProduct && (
+        <EditProduct
+          product={editProduct}
+          onSave={handleSave}
+          onCancel={() => setEditProduct(null)}
+        />
+      )}
     </div>
   );
 };

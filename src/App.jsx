@@ -7,8 +7,8 @@ import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
-    <section className="">
-      <Navbar />
+    <section>
+      <Navbar title="kamrul" />
       <ProductCard />
       <SingleProduct />
       <Dashboard />

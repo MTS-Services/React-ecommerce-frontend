@@ -33,7 +33,7 @@ const SocialLinks = () => (
   </div>
 );
 
-const ContactInfo = () => (
+const ContactInfo = ({ title }) => (
   <div className="flex items-center space-x-4">
     <span className="flex items-center text-sm text-gray-600">
       <GoMail size={18} className="mr-1" />
@@ -42,6 +42,7 @@ const ContactInfo = () => (
     <span className="flex items-center text-sm text-gray-600">
       <HiOutlinePhone size={18} className="mr-1" />
       +880 1886-159495
+      {title}
     </span>
   </div>
 );
