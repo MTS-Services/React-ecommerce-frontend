@@ -180,7 +180,7 @@ const ProductCard2 = ({
 };
 
 const ProductList = () => (
-  <div className="container mx-auto mt-20 mb-2 px-4 py-8">
+  <div className="container mx-auto mt-44 mb-2 px-4 py-8">
     <div className="m-20 mt-0 mb-0 grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:grid-cols-4">
       {products.map((product) => (
         <ProductCard2 key={product.id} {...product} />

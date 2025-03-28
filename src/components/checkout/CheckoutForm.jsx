@@ -1,14 +1,21 @@
 import React, { useState } from "react";
-import {
-  useStripe,
-  useElements,
-  CardNumberElement,
-  CardExpiryElement,
-  CardCvcElement,
-} from "@stripe/react-stripe-js";
-import axios from "axios";
+import { useStripe, useElements } from "@stripe/react-stripe-js";
 
-const CheckoutForm = ({ total }) => {
+const DELIVERY_CHARGE = 5;
+
+const CheckoutForm = ({ product }) => {
+  // Ensure cartItems is always an array
+  const [cartItems, setCartItems] = useState(
+    Array.isArray(product) ? product : [product],
+  );
+
+  const subtotal = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0,
+  );
+
+  const total = subtotal + DELIVERY_CHARGE;
+
   const stripe = useStripe();
   const elements = useElements();
   const [loading, setLoading] = useState(false);
@@ -22,65 +29,53 @@ const CheckoutForm = ({ total }) => {
     setError(null);
 
     try {
-      // ✅ Step 1: Create PaymentIntent
-      const response = await axios.post(
-        "http://localhost:4242/create-payment-intent",
+      // Step 1: Create a Checkout session on your backend
+      const response = await fetch(
+        "https://e-commerce-test-ltj4.onrender.com/api/v1/stripe/checkout",
+        // https://e-commerce-test-ltj4.onrender.com
         {
-          amount: Math.round(total * 100),
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            products: cartItems.map((item) => ({
+              name: item.name,
+              description: item.description,
+              price: item.price, // Convert to cents
+              quantity: item.quantity,
+            })),
+          }),
         },
       );
 
-      const { clientSecret } = response.data;
+      const { sessionId } = await response.json();
 
-      // ✅ Get the CardNumberElement instead of CardElement
-      const cardElement = elements.getElement(CardNumberElement);
-
-      // ✅ Step 2: Confirm payment
-      const { error, paymentIntent } = await stripe.confirmCardPayment(
-        clientSecret,
-        { payment_method: { card: cardElement } },
-      );
+      // Step 2: Redirect to Stripe Checkout
+      const { error } = await stripe.redirectToCheckout({ sessionId });
 
       if (error) {
-        setError(error.message);
-      } else if (paymentIntent.status === "succeeded") {
-        alert("🎉 Payment successful!");
+        setError("An error occurred during the payment process.");
+        console.error("Error during Stripe checkout:", error);
       }
     } catch (err) {
-      setError(err.response?.data?.error || "An error occurred.");
+      setError(err.message || "An error occurred.");
+      console.error("Error creating Stripe checkout session:", err);
     }
+
     setLoading(false);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      {/* Card Number */}
-      <div>
-        <label className="block font-medium text-gray-700">Card Number</label>
-        <CardNumberElement className="mt-2 w-full rounded-md border border-gray-300 p-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
-      </div>
-
-      {/* Expiry Date & CVC */}
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          <label className="block font-medium text-gray-700">Expiry Date</label>
-          <CardExpiryElement className="mt-2 w-full rounded-md border border-gray-300 p-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
-        </div>
-
-        <div>
-          <label className="block font-medium text-gray-700">CVC</label>
-          <CardCvcElement className="mt-2 w-full rounded-md border border-gray-300 p-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
-        </div>
-      </div>
-
+    <form onSubmit={handleSubmit} className="">
+      {/* Error Message */}
       {error && <div className="text-sm text-red-600">{error}</div>}
 
+      {/* Submit Button */}
       <button
         type="submit"
         disabled={loading}
         className={`w-full cursor-pointer rounded-md px-4 py-2 font-semibold text-white ${
           loading ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
-        } focus:outline-none`}
+        } focus:ring-2 focus:ring-indigo-500 focus:outline-none`}
       >
         {loading ? "Processing..." : `Pay $${total.toFixed(2)}`}
       </button>
