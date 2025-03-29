@@ -38,22 +38,26 @@ const Navbar = () => {
         isScrolled ? "bg-white py-0 shadow" : "bg-white py-4 shadow"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Top bar with contact and social info */}
-        <div className="mb-4 hidden items-center justify-between border-b border-gray-200 pb-2 text-lg lg:flex">
+        <div
+          className={`items-center justify-between border-b border-gray-200 pb-2 text-lg lg:flex ${isScrolled ? "mt-2 mb-2" : "mb-2"}`}
+        >
           <div className="flex items-center space-x-4">
-            <span className="flex items-center text-gray-600">
-              <span className="mr-1">
-                <GoMail size={20} />
+            <div className="flex items-center text-gray-600">
+              <span className="">
+                <GoMail size={18} />
               </span>
-              contact@maktechsolution.com
-            </span>
-            <span className="flex items-center text-gray-600">
-              <span className="mr-1">
-                <HiOutlinePhone size={20} />
+              <p className="ml-1 text-sm font-medium">
+                contact@maktechsolution.com
+              </p>
+            </div>
+            <div className="flex items-center text-gray-600">
+              <span className="">
+                <HiOutlinePhone size={18} />
               </span>
-              +880 1886-159495
-            </span>
+              <p className="ml-1 text-sm font-medium">+880 1886-159495 </p>
+            </div>
           </div>
           <div className="flex items-center space-x-3">
             <a
@@ -88,7 +92,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              className={`transition-all duration-300 ${isScrolled ? "h-14" : "h-20"}`}
+              className={`transition-all duration-300 ${isScrolled ? "h-14" : "h-16"}`}
               src="/img/logo/B2B.png" // Adjust the path as needed
               alt="Company Logo"
             />
@@ -96,7 +100,7 @@ const Navbar = () => {
 
           {/* Main navigation links */}
           <nav className="hidden lg:block">
-            <ul className="flex space-x-6 text-center font-semibold">
+            <ul className="flex space-x-6 text-center text-lg font-bold">
               <li>
                 <Link
                   to="/"
@@ -121,14 +125,7 @@ const Navbar = () => {
                   Cart
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/checkout"
-                  className="relative block px-1 py-2 text-black transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#19B2E7] after:transition-all after:content-[''] hover:text-[#19B2E7] hover:after:w-full"
-                >
-                  Checkout
-                </Link>
-              </li>
+
               <li>
                 <Link
                   to="/contact"

@@ -5,6 +5,7 @@ import { CiRepeat } from "react-icons/ci";
 
 import { BsCart3 } from "react-icons/bs";
 import { MdOutlineStar, MdStarHalf } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({
   name,
@@ -23,11 +24,13 @@ const ProductCard = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative h-48 cursor-pointer overflow-hidden rounded-t-lg sm:h-56 md:h-64">
-        <img
-          className="h-full w-full object-cover transition-opacity duration-300"
-          src={isHovered && hoverImage ? hoverImage : image}
-          alt={name}
-        />
+        <Link to={`/products/1234`}>
+          <img
+            className="h-full w-full object-cover transition-opacity duration-300"
+            src={isHovered && hoverImage ? hoverImage : image}
+            alt={name}
+          />
+        </Link>
 
         {/* Icons that appear on hover */}
         <div className="absolute top-0 left-0 mt-26 flex h-full w-full items-center justify-center opacity-0 transition-opacity group-hover:opacity-100">
@@ -36,7 +39,9 @@ const ProductCard = ({
               <FiHeart size={15} className="text-[#0EA5E9]" />
             </button>
             <button className="cursor-pointer rounded-full bg-white p-3 shadow-lg transition-all hover:bg-gray-200">
-              <IoEyeOutline size={15} className="text-[#0EA5E9]" />
+              <Link to={`/products/1234`}>
+                <IoEyeOutline size={15} className="text-[#0EA5E9]" />
+              </Link>
             </button>
             <button className="cursor-pointer rounded-full bg-white p-3 shadow-lg transition-all hover:bg-gray-200">
               <CiRepeat size={15} className="text-[#0EA5E9]" />
