@@ -8,13 +8,13 @@ import TopSelling from "./TopSelling";
 const FastSell = () => {
   return (
     // Container for centered content with responsive padding
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center pt-20">
       {/* Responsive grid:
           - 1 column on mobile
           - 2 columns on small/medium screens
           - 4 columns on large screens */}
       <div className="grid w-[1576px] grid-cols-1 gap-5 px-4 sm:grid-cols-2 lg:grid-cols-4">
-        <TopMostProducst></TopMostProducst>
+        <TopMostProducst />
         <TrendingItems />
         <TopRated />
         <TopSelling />

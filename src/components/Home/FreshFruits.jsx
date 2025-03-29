@@ -19,7 +19,7 @@ const OfferBanner = () => {
               }}
             >
               {/* Always Visible Overlay */}
-              <div className="absolute inset-0 bg-black opacity-30"></div>
+              <div className="absolute inset-0 bg-black opacity-10"></div>
 
               {/* Hover Effect */}
               <div className="absolute inset-0 bg-blue-800 opacity-0 transition-opacity"></div>

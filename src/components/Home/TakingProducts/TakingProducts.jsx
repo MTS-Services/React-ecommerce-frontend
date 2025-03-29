@@ -30,14 +30,14 @@ const features = [
 
 const TakingProducts = () => {
   return (
-    <div className="flex items-center justify-center bg-[#FFFF] px-4 py-[100px]">
+    <div className="flex items-center justify-center bg-[#FFFF] px-4 pb-20">
       <div className="grid w-full max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature) => (
           <div
             key={feature.id}
             className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-md"
           >
-            <div className="mb-3 flex justify-center text-green-500">
+            <div className="mb-3 flex justify-center text-blue-800">
               {feature.icon}
             </div>
             <h2 className="text-lg font-semibold text-gray-800">

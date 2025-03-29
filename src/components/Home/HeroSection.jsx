@@ -38,7 +38,7 @@ const HeroSection = () => {
           pagination={{
             clickable: true,
             renderBullet: (index, className) => {
-              return `<span class="${className}" style="font-size: 30px; width: 25px; height: 25px;"></span>`;
+              return `<span class="${className}" style="font-size: 30px; width: 10px; height: 10px;"></span>`;
             },
           }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}

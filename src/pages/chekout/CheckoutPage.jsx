@@ -21,6 +21,7 @@ const productData = [
     category: "Fruits",
     inStock: true,
     stock: 123,
+    rating: 4.3,
     thumbnail: "./img/products/2_1.jpg",
   },
   {

@@ -27,8 +27,8 @@ const TrendingItems = () => {
   return (
     <div>
       <div className="flex items-center justify-between py-4">
-        <h2 className="text-2xl font-bold">
-          Trending <span className="text-green-400">Items</span>
+        <h2 className="text-2xl font-semibold">
+          Trending <span className="text-blue-800">Items</span>
         </h2>
         {/* Arrow Buttons */}
         <div className="flex gap-2">
