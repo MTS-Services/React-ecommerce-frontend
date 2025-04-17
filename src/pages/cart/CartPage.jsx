@@ -190,6 +190,7 @@ const CartView = () => {
                   </th>
                 </tr>
               </thead>
+
               <tbody>
                 {cartItems.map((product) => (
                   <tr key={product.id} className="border-b border-b-gray-200">
