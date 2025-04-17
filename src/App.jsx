@@ -4,16 +4,14 @@ import { Outlet } from "react-router-dom";
 import ProductCard from "./components/Home/ProductCard";
 import SingleProduct from "./components/Home/SingleProduct";
 import Dashboard from "./components/Dashboard";
+import Footer from "./layout/Footer";
 
 function App() {
   return (
     <section>
       <Navbar title="kamrul" />
-      <ProductCard />
-      <SingleProduct />
-      <Dashboard />
-      {/* <CopyCart /> */}
       <Outlet />
+      <Footer />
     </section>
   );
 }

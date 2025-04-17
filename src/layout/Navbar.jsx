@@ -9,23 +9,27 @@ import { CgMenuRightAlt } from "react-icons/cg";
 import { BsSearch } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
 import { BsCart3 } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const SocialLinks = () => (
   <div className="flex items-center space-x-3">
     <a
-      href="#"
+      href="https://www.facebook.com/MakTechSolution/"
+      target="_blank"
       className="text-gray-600 transition-colors hover:text-[#19B2E7]"
     >
       <SlSocialFacebook size={20} />
     </a>
     <a
-      href="#"
+      href="https://x.com/MakTechSolution"
+      target="_blank"
       className="text-gray-600 transition-colors hover:text-[#19B2E7]"
     >
       <TfiTwitter size={20} />
     </a>
     <a
-      href="#"
+      href="https://www.instagram.com/maktechsolution/"
+      target="_blank"
       className="text-gray-600 transition-colors hover:text-[#19B2E7]"
     >
       <RxInstagramLogo size={20} />
@@ -48,18 +52,25 @@ const ContactInfo = ({ title }) => (
 );
 
 const NavLinks = () => {
-  const links = ["Home", "Products", "Pages", "Contact", "About"];
+  const links = [
+    { label: "Home", path: "/" },
+    { label: "Products", path: "/products" },
+    { label: "Pages", path: "/pages" },
+    { label: "Contact", path: "/contact" },
+    { label: "About", path: "/about" },
+  ];
+
   return (
     <nav className="hidden lg:block">
       <ul className="flex space-x-6 text-center font-semibold">
-        {links.map((link) => (
-          <li key={link}>
-            <a
-              href="#"
+        {links.map((item) => (
+          <li key={item}>
+            <Link
+              to={item.path}
               className="relative block px-1 py-2 text-black transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#19B2E7] after:transition-all after:content-[''] hover:text-[#19B2E7] hover:after:w-full"
             >
-              {link}
-            </a>
+              {item.label}
+            </Link>
           </li>
         ))}
       </ul>
