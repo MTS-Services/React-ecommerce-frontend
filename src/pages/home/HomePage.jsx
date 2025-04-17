@@ -12,7 +12,6 @@ import ProductsList from "../../components/Products/ProductsList";
 const HomePage = () => {
   return (
     <div className="overflow-hidden">
-      fkdkj.]
       <HeroSection />
       <CatagoryCart />
       <FreshFruits />
