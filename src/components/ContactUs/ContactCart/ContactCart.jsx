@@ -29,7 +29,7 @@ const ContactCart = () => {
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-md"
+            className="rounded-lg border border-gray-200 bg-white p-6 text-center shadow"
           >
             <div className="= mb-3 flex justify-center text-[#1447E6]">
               {feature.icon}

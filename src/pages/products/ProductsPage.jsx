@@ -1,10 +1,10 @@
 import React from "react";
-import ProductCard2 from "../../components/ProductCard2";
+import ProductsList from "../../components/Products/ProductsList";
 
 const ProductsPage = () => {
   return (
     <section>
-      <ProductCard2 />
+      <ProductsList />
     </section>
   );
 };

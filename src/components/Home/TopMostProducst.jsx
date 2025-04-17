@@ -6,7 +6,7 @@ const TopMostProducts = () => {
       <div
         className="relative flex h-[250px] w-full flex-col items-center justify-start rounded-2xl bg-cover bg-center p-6 md:h-[350px] md:p-8 lg:h-[375px] lg:p-12 xl:h-[415px]"
         style={{
-          backgroundImage: "url('/img/products/4_12.jpg')",
+          backgroundImage: "url('/img/products/19_1.jpg')",
         }}
       >
         {/* Semi-transparent gradient for better text visibility */}

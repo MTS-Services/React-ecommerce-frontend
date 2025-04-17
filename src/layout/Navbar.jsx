@@ -72,9 +72,11 @@ const Navbar = () => {
         isScrolled ? "bg-white py-0 shadow" : "bg-white py-4 shadow"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Top bar with contact and social info */}
-        <div className="mb-4 hidden items-center justify-between border-b border-gray-200 pb-2 text-lg lg:flex">
+        <div
+          className={`items-center justify-between border-b border-gray-200 pb-2 text-lg lg:flex ${isScrolled ? "mt-2 mb-2" : "mb-2"}`}
+        >
           <div className="flex items-center space-x-4">
             <span className="flex items-center text-gray-600">
               <GoMail size={20} /> contact@maktechsolution.com
@@ -122,7 +124,7 @@ const Navbar = () => {
 
           {/* Main navigation links */}
           <nav className="hidden lg:block">
-            <ul className="flex space-x-6 text-center font-semibold">
+            <ul className="flex space-x-6 text-center text-lg font-bold">
               <li>
                 <Link
                   to="/"

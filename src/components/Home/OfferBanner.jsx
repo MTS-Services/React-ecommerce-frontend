@@ -8,7 +8,7 @@ const OfferBanner = () => {
         {[1, 2].map((index) => (
           <div
             key={index}
-            className="group relative h-[390px] overflow-hidden rounded-[6px] bg-white"
+            className="group relative h-[390px] cursor-pointer overflow-hidden rounded-[6px] bg-black"
           >
             <div
               className="h-full w-full bg-cover bg-center bg-no-repeat"
