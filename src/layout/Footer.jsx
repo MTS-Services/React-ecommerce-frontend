@@ -15,14 +15,14 @@ function Footer() {
       <div className="footer border border-amber-200 bg-amber-50">
         <div className="footer_container">
           <div className="footer_col_1">
-            <img src="./image/B2B logo.png" alt="this is our logo " />
+            <img src="/img/logo/B2B.png" alt="this is our logo " />
             <p>
               Grabit is the biggest market of grocery products. Get your daily
               needs from our store.
             </p>
             <div className="hoto_for_footer">
-              <img className="google" src="./image/google.png" alt="" />
-              <img className="apple" src="./image/apple.png" alt="" />
+              <img className="google" src="/img/footer/google.png" alt="" />
+              <img className="apple" src="/img/footer/apple.png" alt="" />
             </div>
           </div>
 
@@ -97,7 +97,6 @@ function Footer() {
             <div className="footer_contact">
               <div className="footer_address">
                 <a className="footer_icon">
-                  {" "}
                   <FaLocationDot />
                 </a>
                 <p> 2548 Broaddus Maple Court, Madisonville KY 4783, USA.</p>
@@ -105,7 +104,6 @@ function Footer() {
 
               <div className="footer_address">
                 <a href="" className="footer_icon">
-                  {" "}
                   <FaWhatsapp />
                 </a>
                 <p> +00 9876543210</p>
@@ -143,14 +141,14 @@ function Footer() {
               <p>Copyright © Grabit all rights reserved. Powered by Grabit.</p>
             </div>
             <div className="subfooter_payment">
-              <img src="./image/paypal.png" alt="this is a demo " />
+              <img src="/img/footer/paypal.png" alt="this is a demo " />
               <img
                 className="skrill"
-                src="./image/skrill.png"
+                src="/img/footer/skrill.png"
                 alt="this is a demo "
               />
-              <img src="./image/vissa.png" alt="this is a demo " />
-              <img src="./image/visa.png" alt="this is a demo " />
+              <img src="/img/footer/vissa.png" alt="this is a demo " />
+              <img src="/img/footer/visa.png" alt="this is a demo " />
             </div>
           </div>
         </div>

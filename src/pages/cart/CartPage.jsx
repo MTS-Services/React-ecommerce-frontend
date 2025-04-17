@@ -1,28 +1,47 @@
 import React, { useState } from "react";
 
 import { FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const products = [
+const productData = [
   {
     id: 1,
-    name: "Product 1",
-    price: 25.99,
-    quantity: 2,
-    image: "/img/products/1_1.jpg",
+    name: "Organic Apples",
+    description: "Fresh, organic apples from local farms.",
+    price: 80.5,
+    quantity: 1,
+    category: "Fruits",
+    inStock: true,
+    stock: 123,
+    thumbnail: "./img/products/2_1.jpg",
   },
   {
     id: 2,
-    name: "Product 2",
-    price: 40.0,
+    name: "Whole Wheat Bread",
+    description: "100% whole wheat, no preservatives.",
+    price: 2.5,
     quantity: 1,
-    image: "/img/products/1_2.jpg",
+    category: "Bakery",
+    inStock: true,
+    stock: 123,
+    thumbnail: "./img/products/2_2.jpg",
+  },
+  {
+    id: 3,
+    name: "Almond Milk",
+    description: "Unsweetened, 1L carton.",
+    price: 5,
+    quantity: 2,
+    category: "Dairy Alternatives",
+    inStock: true,
+    stock: 123,
+    thumbnail: "./img/products/1_1.jpg",
   },
 ];
-
 const DELIVERY_CHARGE = 5;
 
 const CartView = () => {
-  const [cartItems, setCartItems] = useState(products);
+  const [cartItems, setCartItems] = useState(productData);
 
   const incrementItemQuantity = (itemId) => {
     setCartItems((prevItems) =>
@@ -54,7 +73,7 @@ const CartView = () => {
   const total = subtotal + DELIVERY_CHARGE;
 
   return (
-    <section className="p-4 lg:px-10 xl:px-44">
+    <section className="p-4 lg:px-10 lg:pt-44 xl:px-44">
       <h1 className="mb-6 text-3xl font-semibold">Cart page</h1>
       {cartItems.length === 0 ? (
         <div className="flex h-60 flex-col items-center justify-center text-xl font-semibold text-gray-500">
@@ -151,7 +170,7 @@ const CartView = () => {
               <thead className="border-b border-b-gray-200">
                 <tr>
                   <th className="px-4 py-2 text-left text-gray-500">Product</th>
-                  <th className="px-4 py-2 text-center text-gray-500">Price</th>
+
                   <th className="px-4 py-2 text-center text-gray-500">
                     Quantity
                   </th>
@@ -164,17 +183,20 @@ const CartView = () => {
               <tbody>
                 {cartItems.map((product) => (
                   <tr key={product.id} className="border-b border-b-gray-200">
-                    <td className="py- flex items-center text-left">
+                    <td className="flex items-center text-left">
                       <img
-                        src={product.image}
+                        src={product.thumbnail}
                         alt={product.name}
                         className="mr-4 h-18 w-18 rounded-lg object-cover"
                       />
-                      {product.name}
+                      <div>
+                        <p className="">{product.name}</p>
+                        <p className="text-md font-bold">
+                          ${product.price.toFixed(2)}
+                        </p>
+                      </div>
                     </td>
-                    <td className="px-4 py-2 text-center">
-                      ${product.price.toFixed(2)}
-                    </td>
+
                     <td className="px-4 py-2 text-center">
                       <div className="flex items-center justify-center gap-2">
                         <button
@@ -210,15 +232,18 @@ const CartView = () => {
             </table>
 
             <div className="flex items-center justify-between">
-              <a
-                href="#"
+              <Link
+                to="/products"
                 className="cursor-pointer font-semibold text-gray-500 underline"
               >
                 Continue Shopping
-              </a>
-              <button className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600">
+              </Link>
+              <Link
+                to="/checkout"
+                className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600"
+              >
                 Checkout
-              </button>
+              </Link>
             </div>
           </div>
         </div>

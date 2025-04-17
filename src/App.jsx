@@ -1,21 +1,15 @@
 import React from "react";
 import Navbar from "./layout/Navbar";
 import { Outlet } from "react-router-dom";
-import ProductCard from "./components/Home/ProductCard";
-import SingleProduct from "./components/Home/SingleProduct";
-import Dashboard from "./components/Dashboard";
-import Footer from "./layout/Footer";
 
 function App() {
   return (
-    <section>
-      <Navbar title="kamrul" />
-      <Home />
+    <section className="">
+      <Navbar />
       <Outlet />
-      <ProductCard />
-      <SingleProduct />
-      <Dashboard />
-      <Footer />
+
+      {/* <Dashboard /> */}
+      {/* <Footer /> */}
     </section>
   );
 }
