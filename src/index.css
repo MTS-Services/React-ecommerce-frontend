@@ -15,4 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+a,
+button {
+  cursor: pointer;
+}
