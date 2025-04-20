@@ -11,7 +11,7 @@ const Navbar = () => {
   // State to manage visibility of dropdown menus
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll effect for header
+  // Scroll effect for header
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -20,7 +20,6 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -40,11 +39,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img
-              className={`transition-all duration-300 ${isScrolled ? "h-14" : "h-16"}`}
-              src="/img/logo/B2B.png" // Adjust the path as needed
-              alt="Company Logo"
-            />
+            <Link to="/">
+              <img
+                className={`transition-all duration-300 ${
+                  isScrolled ? "h-14" : "h-20"
+                }`}
+                src="/img/logo/B2B.png"
+                alt="Company Logo"
+              />
+            </Link>
           </div>
 
           {/* Main navigation links */}
@@ -53,7 +56,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className="relative block px-1 py-2 text-black transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#19B2E7] after:transition-all after:content-[''] hover:text-[#19B2E7] hover:after:w-full"
+                  className="relative block px-1 py-2 text-black transition-colors hover:text-[#19B2E7]"
                 >
                   Home
                 </Link>
@@ -61,7 +64,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/products"
-                  className="relative block px-1 py-2 text-black transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#19B2E7] after:transition-all after:content-[''] hover:text-[#19B2E7] hover:after:w-full"
+                  className="relative block px-1 py-2 text-black transition-colors hover:text-[#19B2E7]"
                 >
                   Products
                 </Link>
@@ -69,16 +72,23 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/cart"
-                  className="relative block px-1 py-2 text-black transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#19B2E7] after:transition-all after:content-[''] hover:text-[#19B2E7] hover:after:w-full"
+                  className="relative block px-1 py-2 text-black transition-colors hover:text-[#19B2E7]"
                 >
                   Cart
                 </Link>
               </li>
-
+              <li>
+                <Link
+                  to="/checkout"
+                  className="relative block px-1 py-2 text-black transition-colors hover:text-[#19B2E7]"
+                >
+                  Checkout
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/contact"
-                  className="relative block px-1 py-2 text-black transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-[#19B2E7] after:transition-all after:content-[''] hover:text-[#19B2E7] hover:after:w-full"
+                  className="relative block px-1 py-2 text-black transition-colors hover:text-[#19B2E7]"
                 >
                   Contact
                 </Link>
@@ -86,7 +96,7 @@ const Navbar = () => {
             </ul>
           </nav>
 
-          {/* Right side elements: search, user, cart */}
+          {/* Right side elements */}
           <div className="flex items-center space-x-4">
             {/* Search */}
             <SearchComponent />

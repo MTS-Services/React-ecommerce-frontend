@@ -13,7 +13,7 @@ const FastSell = () => {
           - 1 column on mobile
           - 2 columns on small/medium screens
           - 4 columns on large screens */}
-      <div className="grid w-[1576px] grid-cols-1 gap-5 px-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:w-[1527px] lg:grid-cols-4">
         <TopMostProducst />
         <TrendingItems />
         <TopRated />

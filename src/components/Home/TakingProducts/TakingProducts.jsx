@@ -30,20 +30,18 @@ const features = [
 
 const TakingProducts = () => {
   return (
-    <div className="flex items-center justify-center bg-[#FFFF] px-4 pb-20">
-      <div className="grid w-full max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="mx-auto w-full max-w-[1577px] px-4 pb-8 md:px-8 md:pb-12 lg:px-10 lg:pb-20">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="rounded-lg border border-gray-300 bg-white p-6 text-center shadow-md"
+            className="flex flex-col items-center justify-center gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow transition-shadow duration-300 ease-in-out hover:shadow-lg"
           >
-            <div className="mb-3 flex justify-center text-blue-800">
-              {feature.icon}
-            </div>
-            <h2 className="text-lg font-semibold text-gray-800">
+            <div className="text-[#1E3A8A]">{feature.icon}</div>
+            <h2 className="text-center text-lg font-semibold text-gray-800">
               {feature.title}
             </h2>
-            <p className="text-sm text-gray-500">{feature.desc}</p>
+            <p className="text-center text-sm text-gray-500">{feature.desc}</p>
           </div>
         ))}
       </div>
