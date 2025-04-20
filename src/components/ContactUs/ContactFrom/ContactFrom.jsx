@@ -67,7 +67,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600"
+              className="cursor-pointer rounded-sm bg-[#19B2E7] px-4 py-2 font-semibold text-white transition-all hover:bg-[#12284C]"
             >
               Contact Now
             </button>

@@ -31,7 +31,7 @@ const ContactCart = () => {
             key={feature.id}
             className="rounded-lg border border-gray-200 bg-white p-6 text-center shadow"
           >
-            <div className="mb-3 flex justify-center text-[#1447E6]">
+            <div className="mb-3 flex justify-center text-[#19B2E7]">
               {feature.icon}
             </div>
             <h2 className="text-[20px] font-semibold text-gray-800">

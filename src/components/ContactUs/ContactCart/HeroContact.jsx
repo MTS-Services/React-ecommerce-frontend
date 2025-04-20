@@ -20,16 +20,16 @@ const HeroContact = () => {
               <div className="absolute inset-0 bg-black opacity-30"></div>
 
               {/* Hover Effect */}
-              <div className="absolute inset-0 bg-blue-800 opacity-0 transition-opacity"></div>
+              <div className="absolute inset-0 bg-[#19B2E7] opacity-0 transition-opacity"></div>
             </div>
 
             {/* Content inside the banner */}
             <div className="absolute inset-0 flex items-center justify-center p-4">
               <div className="max-w-md pr-8 pl-16 text-center">
-                <h2 className="text-xl font-bold text-white">Home / Contact</h2>
+                <h1 className="text-4xl font-bold text-white">Contact</h1>
 
                 <div className="mt-4">
-                  <button className="cursor-pointer rounded-sm bg-blue-800 px-4 py-2 font-semibold text-white transition-all hover:bg-blue-600">
+                  <button className="cursor-pointer rounded-sm bg-[#19B2E7] px-4 py-2 font-semibold text-white transition-all hover:bg-[#12284C]">
                     Shop Now
                   </button>
                 </div>
