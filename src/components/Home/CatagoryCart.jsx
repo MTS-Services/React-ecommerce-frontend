@@ -109,9 +109,6 @@ const ProductCarousel = () => {
   return (
     <div className="flex items-center justify-center">
       <div className="w-full items-center justify-center px-4 py-8 md:py-12 lg:w-[1527px] lg:py-20">
-        <h2 className="mb-6 text-center text-2xl font-bold">
-          Product Carousel
-        </h2>
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}

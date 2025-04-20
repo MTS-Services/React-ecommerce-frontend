@@ -4,7 +4,7 @@ import "./freshFruits.css"; // Import the styles
 
 const OfferBanner = () => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center pt-12">
       <div className="w-full max-w-[1527px] gap-6 px-4 sm:grid-cols-1 md:grid-cols-1">
         {[1].map((index) => (
           <div

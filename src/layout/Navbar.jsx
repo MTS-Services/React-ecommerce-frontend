@@ -191,12 +191,12 @@ const Navbar = () => {
             </div>
 
             {/* User account */}
-            <a
-              href="#"
+            <Link
+              to="/login"
               className="p-2 text-gray-600 transition-colors hover:text-[#19B2E7]"
             >
               <FiUsers size={25} />
-            </a>
+            </Link>
 
             {/* Shopping cart */}
 

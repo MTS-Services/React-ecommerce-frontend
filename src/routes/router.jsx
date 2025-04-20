@@ -16,6 +16,7 @@ import HomePage from "../pages/home/HomePage";
 import SuccessPage from "../pages/chekout/SuccessPage";
 import CancelPage from "../pages/chekout/CancelPage";
 import SingleProducts from "../pages/product/SingleProducts";
+import LogInPage from "../pages/login/LogInPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +32,7 @@ export const router = createBrowserRouter(
       <Route path="/success" element={<SuccessPage />} />
       <Route path="/cancel" element={<CancelPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/login" element={<LogInPage />} />
     </Route>,
   ),
 );
