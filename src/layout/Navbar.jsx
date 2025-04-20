@@ -276,8 +276,8 @@ const Header = () => {
 
         {/* Mobile Nav */}
         {menuOpen && (
-          <div className="mt-4 space-y-3 lg:hidden">
-            <ul className="flex flex-col gap-2 font-semibold">
+          <div className="mt-4 space-y-4 rounded-lg bg-white p-6 shadow-lg lg:hidden">
+            <ul className="flex flex-col gap-4 font-semibold">
               {links.map((link, index) => {
                 const href =
                   link.toLowerCase() === "home"
@@ -287,7 +287,7 @@ const Header = () => {
                   <li key={index}>
                     <a
                       href={href}
-                      className="block text-black hover:text-[#19B2E7]"
+                      className="block text-black transition-all duration-300 ease-in-out hover:text-[#19B2E7]"
                     >
                       {link}
                     </a>
@@ -296,8 +296,8 @@ const Header = () => {
               })}
             </ul>
 
-            {/* ShiftingDropDown under About in mobile, left-aligned */}
-            <div className="-ml-10">
+            {/* ShiftingDropDown */}
+            <div className="ml-[-34px] md:ml-[-200px]">
               <ShiftingDropDown />
             </div>
           </div>
