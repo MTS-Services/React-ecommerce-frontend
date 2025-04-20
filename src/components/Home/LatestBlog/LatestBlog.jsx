@@ -48,8 +48,8 @@ const LatestBlog = () => {
   ];
 
   return (
-    <div className="flex justify-center px-4">
-      <div className="px- w-full py-8 md:py-10 lg:w-[1527px] lg:py-10">
+    <div className="flex justify-center px-4 lg:px-8 xl:px-8">
+      <div className="px- w-full py-8 md:py-10 lg:w-[1500px] lg:py-10">
         <div className="mb-8 flex w-full overflow-hidden">
           <div className="flex flex-col justify-start">
             <h3 className="text-left text-3xl font-bold text-black">

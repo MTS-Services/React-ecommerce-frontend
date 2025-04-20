@@ -26,7 +26,7 @@ const products = [
 
 const HeroSection = () => {
   return (
-    <div className="mt-24 flex items-center justify-center md:mt-32 lg:mt-[180px]">
+    <div className="mt-44 flex items-center justify-center md:mt-50 lg:mt-[180px]">
       <div className="w-full px-4 lg:max-w-[1527px]">
         <Swiper
           modules={[Navigation, Pagination, Autoplay, EffectFade]} // Added EffectFade
