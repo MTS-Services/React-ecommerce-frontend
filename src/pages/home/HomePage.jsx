@@ -8,6 +8,7 @@ import OfferBanner from "../../components/Home/OfferBanner";
 import LatestBlog from "../../components/Home/LatestBlog/LatestBlog";
 import TakingProducts from "../../components/Home/TakingProducts/TakingProducts";
 import ProductsList from "../../components/Products/ProductsList";
+import PopUp from "../../components/popUp/PopUp";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       <OfferBanner />
       <FastSell />
       <LatestBlog />
+      <PopUp />;
     </div>
   );
 };
