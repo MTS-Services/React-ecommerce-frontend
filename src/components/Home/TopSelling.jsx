@@ -97,7 +97,7 @@ const TopSelling = () => {
                 alt={product.name}
               />
               <div className="ml-3">
-                <h2 className="text-lg font-bold text-gray-700">
+                <h2 className="text-base font-bold text-gray-700">
                   {product.name}
                 </h2>
                 <p className="text-gray-500">Category</p>
