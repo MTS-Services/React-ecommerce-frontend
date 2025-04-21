@@ -10,7 +10,6 @@ const ViewToggleAndSort = () => {
     { value: "priceHighLow", label: "Relevance" },
     { value: "name", label: "Name, A to Z" },
     { value: "name", label: "Name, Z to A" },
-
     { value: "parices", label: "Low to high" },
     { value: "parices", label: "Hight to low" },
   ];
