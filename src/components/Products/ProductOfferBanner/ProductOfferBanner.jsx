@@ -3,7 +3,7 @@ import "./ProductOfferBanner.css"; // Import the styles
 
 const ProductOfferBanner = () => {
   return (
-    <div className="mt-56 flex items-center justify-center gap-6 px-4 lg:mt-40 lg:py-12">
+    <div className="mt-54 flex items-center justify-center gap-6 px-4 lg:mt-40 lg:py-12">
       <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-1 lg:w-[1527px] lg:grid-cols-2">
         {[1, 2].map((index) => (
           <div

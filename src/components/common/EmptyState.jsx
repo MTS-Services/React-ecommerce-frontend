@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const EmptyState = ({ message = "Product not found" }) => (
   <div className="flex h-screen flex-col items-center justify-center pt-56">
     <div className="mb-4 text-gray-400">

@@ -66,7 +66,7 @@ export const CartModal = () => {
 
       {/* Cart Modal */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-80 transform bg-white shadow-lg transition-transform duration-300 ease-in-out md:w-96 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 z-50 h-full w-92 transform bg-white shadow-lg transition-transform duration-300 ease-in-out md:w-96 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex h-full flex-col p-4">
           {/* Modal Header */}

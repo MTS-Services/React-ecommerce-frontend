@@ -65,7 +65,7 @@ const FilterSection = ({ title, children, defaultOpen = false }) => (
 
 const FilterSidebar = () => {
   return (
-    <div className="rounded-[6px] border border-[#EEEEEE] bg-[#F8F8FB] p-4 text-sm">
+    <div className="rounded-md border border-[#EEEEEE] bg-[#F8F8FB] p-4 text-sm">
       {/* Category Filter */}
       <FilterSection title="Category" defaultOpen>
         <div className="space-y-2">
