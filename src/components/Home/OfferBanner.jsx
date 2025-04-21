@@ -4,7 +4,7 @@ import "./offerBanner.css"; // Import the styles
 const OfferBanner = () => {
   return (
     <div className="flex items-center justify-center">
-      <div className="mx-4 grid w-[1576px] gap-6 px-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
+      <div className="grid w-full grid-cols-1 gap-6 px-4 md:grid-cols-1 lg:w-[1527px] lg:grid-cols-2">
         {[1, 2].map((index) => (
           <div
             key={index}
@@ -25,11 +25,11 @@ const OfferBanner = () => {
 
             {/* Content inside the banner */}
             <div className="absolute inset-0 flex items-center justify-end p-6">
-              <div className="max-w-md pl-48 text-right">
+              <div className="max-w-md pl-35 text-right md:pl-35 lg:pl-48">
                 <h2 className="text-3xl font-extrabold text-[#333333]">
                   Card Title
                 </h2>
-                <p className="mt-2 text-lg text-gray-800">
+                <p className="pt-2 text-[18px] font-bold text-gray-600">
                   A card component has a figure, a body part, and inside the
                   body there are title and actions parts.
                 </p>

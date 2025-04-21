@@ -2,26 +2,24 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="flex items-center justify-center py-12 md:py-20 lg:py-[100px]">
-      <div className="grid w-[1492px] grid-cols-1 items-center gap-2 md:grid-cols-2 lg:grid-cols-2">
-        <div>
-          {/* Google Map Embed */}
-          <div className="">
-            <div className="h-[500px] w-full">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243693.39652780895!2d-73.98707244730792!3d40.73061005105826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259ae8e0e4b93%3A0xd4fcb68a1ea024f4!2sNew%20York%2C%20NY%201001!5e0!3m2!1sen!2sus!4v1624540534179!5m2!1sen!2sus"
-                className="h-full w-full rounded-lg"
-                style={{ border: "0" }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
+    <div className="flex items-center justify-center overflow-hidden py-12 md:py-16">
+      <div className="grid w-full grid-cols-1 items-center gap-8 px-4 md:w-full md:grid-cols-2 lg:w-[1527px]">
+        {/* Google Map Section */}
+        <div className="order-2 md:order-1 lg:order-2">
+          <div className="h-[400px] w-full md:h-[500px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243693.39652780895!2d-73.98707244730792!3d40.73061005105826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259ae8e0e4b93%3A0xd4fcb68a1ea024f4!2sNew%20York%2C%20NY%201001!5e0!3m2!1sen!2sus!4v1624540534179!5m2!1sen!2sus"
+              className="h-full w-full rounded-lg"
+              style={{ border: "0" }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
 
-        <div className="mx-full container">
-          {/* Contact Form */}
-          <form className="mx-auto max-w-2xl rounded-lg bg-white p-6 shadow-md">
+        {/* Contact Form Section */}
+        <div className="mt-6 md:order-2 lg:order-2 lg:pl-6">
+          <form className="mx-auto rounded-lg bg-white p-8 shadow-md">
             <div className="mb-4">
               <label className="block text-lg font-medium text-gray-700">
                 Name

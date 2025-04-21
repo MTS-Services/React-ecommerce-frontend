@@ -4,8 +4,8 @@ import "./freshFruits.css"; // Import the styles
 
 const OfferBanner = () => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="mx-4 w-full max-w-[1492px] gap-6 px-4 sm:grid-cols-1 md:grid-cols-1">
+    <div className="flex items-center justify-center pt-12">
+      <div className="w-full max-w-[1527px] gap-6 px-4 sm:grid-cols-1 md:grid-cols-1">
         {[1].map((index) => (
           <div
             key={index}
@@ -28,11 +28,11 @@ const OfferBanner = () => {
             {/* Content inside the banner */}
             <div className="absolute inset-0 flex items-center justify-end p-4">
               <div className="max-w-md pr-8 pl-16 text-right">
-                <h2 className="text-3xl font-extrabold text-[#333333]">
+                <h2 className="text-3xl font-extrabold text-[#FFF]">
                   Fresh Fruits Healthy Products
                 </h2>
                 <h3 className="mt-4 text-[24px] font-extrabold text-gray-800">
-                  <span className="text-[24px] font-extrabold text-green-800">
+                  <span className="text-[24px] font-extrabold text-[#1E3A8A]">
                     30% off sale
                   </span>{" "}
                   Hurry up!!!
