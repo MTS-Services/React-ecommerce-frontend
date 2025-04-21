@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import axios from "axios";
 import HeroSection from "../../components/Home/HeroSection";
 import CatagoryCart from "../../components/Home/CatagoryCart";
 import FastSell from "../../components/Home/FastSell";
@@ -9,7 +10,6 @@ import LatestBlog from "../../components/Home/LatestBlog/LatestBlog";
 import TakingProducts from "../../components/Home/TakingProducts/TakingProducts";
 import ProductCard from "../../components/Products/ProductCard";
 import DayOfTheDeal from "../../components/Home/DayOfTheDeal/DayOfTheDeal";
-import axios from "axios";
 import LoadingSpinner from "../../components/common/LoadingSpinner";
 
 const HomePage = () => {
