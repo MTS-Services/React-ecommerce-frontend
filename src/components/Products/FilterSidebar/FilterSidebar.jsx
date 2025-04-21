@@ -68,11 +68,11 @@ const FilterSidebar = () => {
     <div className="rounded-[6px] border border-[#EEEEEE] bg-[#F8F8FB] p-4 text-sm">
       {/* Category Filter */}
       <FilterSection title="Category" defaultOpen>
-        <div className="space-y-4">
+        <div className="space-y-2">
           {CATEGORIES.map((category, index) => (
             <label
               key={index}
-              className="flex cursor-pointer items-center gap-4 rounded-lg border border-gray-200 p-4 hover:bg-gray-100"
+              className="flex cursor-pointer items-center gap-4 rounded-lg border border-gray-200 p-2 hover:bg-gray-100"
             >
               <input
                 type="checkbox"
@@ -121,7 +121,7 @@ const FilterSidebar = () => {
           {WEIGHTS.map((weight, index) => (
             <label
               key={index}
-              className="flex cursor-pointer items-center gap-4 rounded-lg border border-gray-200 p-4 hover:bg-gray-100"
+              className="flex cursor-pointer items-center gap-4 rounded-lg border border-gray-200 p-2 hover:bg-gray-100"
             >
               <input
                 type="checkbox"

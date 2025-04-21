@@ -6,9 +6,27 @@ export const CartModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   // Sample cart data - replace with your actual cart state
   const [cartItems, setCartItems] = useState([
-    { id: 1, name: "Product 1", price: 19.99, quantity: 2 },
-    { id: 2, name: "Product 2", price: 29.99, quantity: 1 },
-    { id: 3, name: "Product 3", price: 59.99, quantity: 8 },
+    {
+      id: 1,
+      img: "/img/products/1_1.jpg",
+      name: "Product 1",
+      price: 19.99,
+      quantity: 2,
+    },
+    {
+      id: 2,
+      img: "/img/products/1_1.jpg",
+      name: "Product 2",
+      price: 29.99,
+      quantity: 1,
+    },
+    {
+      id: 3,
+      img: "/img/products/1_1.jpg",
+      name: "Product 3",
+      price: 59.99,
+      quantity: 8,
+    },
   ]);
 
   const toggleModal = () => setIsOpen(!isOpen);
@@ -63,40 +81,55 @@ export const CartModal = () => {
             </button>
           </div>
 
-          {/* Cart Items */}
-          <div className="flex-1 overflow-y-auto py-4">
+          {/* Cart Items Table */}
+          <div className="flex-1 overflow-x-auto py-4">
             {cartItems.length === 0 ? (
               <p className="py-8 text-center text-gray-500">
                 Your cart is empty
               </p>
             ) : (
-              <ul className="space-y-4">
-                {cartItems.map((item) => (
-                  <li
-                    key={item.id}
-                    className="flex justify-between border-b border-b-gray-300 pb-4"
-                  >
-                    <div>
-                      <h3 className="font-medium">{item.name}</h3>
-                      <p className="text-sm text-gray-500">
-                        {item.quantity} × ${item.price.toFixed(2)}
-                      </p>
-                    </div>
-                    <div className="flex items-center">
-                      <span className="mr-4">
+              <table className="min-w-full table-auto border-collapse">
+                <thead>
+                  <tr className="bg-gray-100 text-left text-sm font-semibold text-gray-700">
+                    <th className="p-3">Image</th>
+                    <th className="p-3">Name</th>
+                    <th className="p-3">Quantity</th>
+                    <th className="p-3">Total</th>
+                    <th className="p-3 text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 text-sm">
+                  {cartItems.map((item) => (
+                    <tr key={item.id} className="items-center space-y-6">
+                      <td className="">
+                        <img
+                          src={item.img}
+                          alt={item.name}
+                          className="h-16 w-16 rounded object-cover"
+                        />
+                      </td>
+
+                      <td className="font-medium">
+                        {item.name} ${item.price.toFixed(2)}
+                      </td>
+
+                      <td className="text-center">{item.quantity}</td>
+                      <td className="text-center">
                         ${(item.price * item.quantity).toFixed(2)}
-                      </span>
-                      <button
-                        onClick={() => removeItem(item.id)}
-                        className="text-red-500 hover:text-red-700"
-                        aria-label={`Remove ${item.name} from cart`}
-                      >
-                        <FiX />
-                      </button>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                      </td>
+                      <td className="text-center">
+                        <button
+                          onClick={() => removeItem(item.id)}
+                          className="text-red-500 hover:text-red-700"
+                          aria-label={`Remove ${item.name} from cart`}
+                        >
+                          <FiX />
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             )}
           </div>
 
@@ -107,7 +140,7 @@ export const CartModal = () => {
                 <span>Total:</span>
                 <span>${total.toFixed(2)}</span>
               </div>
-              <button className="w-full rounded bg-blue-600 py-2 text-white transition hover:bg-blue-700">
+              <button className="w-full rounded bg-blue-900 py-2 text-white transition hover:bg-blue-700">
                 Proceed to Checkout
               </button>
             </div>

@@ -105,7 +105,7 @@ const HomePage = () => {
     <div className="overflow-hidden">
       <HeroSection />
       <CatagoryCart />
-      <DayOfTheDeal></DayOfTheDeal>
+      <DayOfTheDeal />
       <FreshFruits />
       <div className="m-auto mx-auto max-w-[1577px] px-4 py-12 md:px-10 lg:py-22">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5">

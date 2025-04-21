@@ -40,6 +40,7 @@ const productData = [
     thumbnail: "./img/products/1_1.jpg",
   },
 ];
+
 const DELIVERY_CHARGE = 5;
 
 const CartView = () => {
