@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { CgMenuRightAlt } from "react-icons/cg";
 import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -102,14 +101,14 @@ const Navbar = () => {
             <SearchComponent />
 
             {/* User account */}
-            <a
-              href="#"
+            <Link
+              to={"/login"}
               className="p-2 text-gray-600 transition-colors hover:text-[#19B2E7]"
             >
               <span>
                 <FiUsers size={25} />
               </span>
-            </a>
+            </Link>
 
             {/* Shopping cart */}
             <CartModal />

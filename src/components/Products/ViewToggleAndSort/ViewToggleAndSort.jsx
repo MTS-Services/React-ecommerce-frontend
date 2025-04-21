@@ -10,7 +10,6 @@ const ViewToggleAndSort = () => {
     { value: "priceHighLow", label: "Relevance" },
     { value: "name", label: "Name, A to Z" },
     { value: "name", label: "Name, Z to A" },
-
     { value: "parices", label: "Low to high" },
     { value: "parices", label: "Hight to low" },
   ];
@@ -23,7 +22,7 @@ const ViewToggleAndSort = () => {
           onClick={() => setView("grid")}
           className={`rounded-md border p-2 ${
             view === "grid"
-              ? "bg-[#155DFC] text-white"
+              ? "bg-[#19B2E7] text-white"
               : "bg-white text-gray-500"
           }`}
         >
@@ -33,7 +32,7 @@ const ViewToggleAndSort = () => {
           onClick={() => setView("list")}
           className={`rounded-md border p-2 ${
             view === "list"
-              ? "bg-[#155DFC] text-white"
+              ? "bg-[#19B2E7] text-white"
               : "bg-white text-gray-500"
           }`}
         >
