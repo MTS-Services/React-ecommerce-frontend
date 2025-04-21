@@ -1,3 +1,5 @@
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+
 const LatestBlog = () => {
   const blogs = [
     {
@@ -50,14 +52,23 @@ const LatestBlog = () => {
   return (
     <div className="flex justify-center px-4 lg:px-8 xl:px-8">
       <div className="px- w-full py-8 md:py-10 lg:w-[1500px] lg:py-10">
-        <div className="mb-8 flex w-full overflow-hidden">
-          <div className="flex flex-col justify-start">
-            <h3 className="text-left text-3xl font-bold text-black">
-              Latest <span className="text-green-900">Blog</span>
+        <div className="mx-auto mb-12 flex max-w-[1497px] flex-col items-center justify-between gap-6 md:flex-row">
+          <div>
+            <h3 className="text-3xl font-extrabold text-gray-900">
+              Day Of The Deal
             </h3>
-            <p className="text-left">
-              We track interesting topics every day in 2023.
+            <p className="mt-2 text-gray-500">
+              Don't wait. The time will never be just right.
             </p>
+          </div>
+
+          <div className="flex items-center justify-center gap-4 rounded-lg py-6">
+            <h2 className="flex items-center gap-1 font-semibold">
+              All Blogs
+              <span>
+                <MdOutlineKeyboardDoubleArrowRight className="" />
+              </span>
+            </h2>
           </div>
         </div>
 

@@ -1,84 +1,41 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css"; // এই লাইনটা বাদ দাও Tailwind use করলে
+import "./testing.css"; // যদি আলাদা কিছু করো, নাহলে এটা লাগবে না
+import OfferBanner from "./Home/FreshFruits";
 
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
-const products = [
-  {
-    id: 1,
-    image:
-      "https://img.freepik.com/premium-photo/banner-group-vegetables-minimalistic-modern-harvest-tomatoes-zucchini-squash_1048944-3078666.jpg?semt=ais_hybrid",
-    title: "Exclusive Product 1",
-    price: "$199",
-    discountPrice: "$149",
-  },
-  {
-    id: 2,
-    image:
-      "https://img.freepik.com/premium-photo/man-farmer-holds-vegetables-his-hands-garden-selective-focus-food_73944-19149.jpg?semt=ais_hybrid",
-
-    title: "Exclusive Product 2",
-    price: "$249",
-    discountPrice: "$199",
-  },
-  {
-    id: 3,
-    image:
-      "https://img.freepik.com/premium-photo/child-is-harvesting-tomatoes-selective-focus-kid_73944-22286.jpg?semt=ais_hybrid",
-
-    title: "Exclusive Product 1",
-
-    price: "$299",
-    discountPrice: "$249",
-  },
-];
-
-const HeroSection = () => {
+function TabsExample() {
   return (
-    <div className="flex items-center justify-center py-10">
-      <div className="w-full max-w-6xl px-4">
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          className="rounded-lg shadow-lg"
+    <Tabs>
+      <TabList className="mb-4 flex gap-4">
+        <Tab
+          className="cursor-pointer rounded-md bg-gray-200 px-4 py-2 text-gray-800 hover:bg-gray-300 focus:outline-none"
+          selectedClassName="bg-blue-600 text-white"
         >
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <div className="relative flex items-center overflow-hidden rounded-lg bg-white shadow-md">
-                <div
-                  className="h-[500px] w-full bg-cover bg-center"
-                  style={{ backgroundImage: `url(${product.image})` }}
-                ></div>
-                <div className="bg-opacity-70 r l-0 absolute top-1/2 w-1/2 -translate-y-1/2 transform">
-                  <h2 className="text-[50px] font-bold text-[#FFFF]">
-                    {product.title}
-                  </h2>
-                  <p className="mt-2 text-lg text-[#FFFF] line-through">
-                    {product.price}
-                  </p>
-                  <p className="font-bould text-2xl text-red-500">
-                    {product.discountPrice}
-                  </p>
-                  <div className="mt-2">
-                    <button className="w-[50%] rounded-md border-r-4 border-b-4 border-[#008DBD] bg-blue-600 py-2 font-semibold text-[#00000] transition hover:bg-blue-700">
-                      Shop Now
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </div>
-  );
-};
+          Tab 1
+        </Tab>
+        <Tab
+          className="cursor-pointer rounded-md bg-gray-200 px-4 py-2 text-gray-800 hover:bg-gray-300 focus:outline-none"
+          selectedClassName="bg-blue-600 text-white"
+        >
+          Tab 2
+        </Tab>
+      </TabList>
 
-export default HeroSection;
+      <TabPanel>
+        <div className="rounded-md bg-gray-100 p-4">
+          <h2 className="text-lg font-semibold">Content for Tab 1</h2>
+          <OfferBanner></OfferBanner>
+        </div>
+      </TabPanel>
+      <TabPanel>
+        <div className="rounded-md bg-gray-100 p-4">
+          <h2 className="text-lg font-semibold">Content for Tab 2</h2>
+          <p>This is the content of the second tab.</p>
+        </div>
+      </TabPanel>
+    </Tabs>
+  );
+}
+
+export default TabsExample;

@@ -1,0 +1,22 @@
+/* styles.css বা App.css */
+.react-tabs__tab-list {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  border: none; /* বর্ডার বাদ */
+  list-style: none;
+}
+
+.react-tabs__tab {
+  padding: 8px 16px;
+  cursor: pointer;
+  background: #f0f0f0;
+  border: none; /* বর্ডার বাদ */
+  border-radius: 5px;
+}
+
+.react-tabs__tab--selected {
+  background: #007bff;
+  color: white;
+}
