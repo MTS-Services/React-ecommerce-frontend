@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { GoMail, GoSearch } from "react-icons/go";
 import {
   SlSocialFacebook,
@@ -17,6 +17,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -25,6 +26,9 @@ const Header = () => {
     { id: 2, name: "Product 2", price: "$20", image: "/img/products/1_1.jpg" },
   ]);
 
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
   const links = ["Home", "Products", "Contact", "About"];
 
   const toggleCart = () => setIsCartOpen(!isCartOpen);
@@ -157,11 +161,12 @@ const Header = () => {
             {/* Search */}
             <div className="relative">
               <button
-                onClick={() => setSearchOpen(!searchOpen)}
+                onClick={() => setSearchOpen(!searchOpen)} // Toggle the search bar visibility
                 className="p-2 text-gray-600 transition-colors hover:text-[#19B2E7]"
               >
                 <GoSearch size={25} />
               </button>
+
               <AnimatePresence>
                 {searchOpen && (
                   <motion.div
@@ -173,6 +178,8 @@ const Header = () => {
                     <input
                       type="text"
                       placeholder="Search products..."
+                      value={searchQuery} // Bind the input to the state
+                      onChange={handleSearchChange} // Capture the input change
                       className="w-full rounded-md border border-gray-300 p-2 shadow-sm focus:ring-2 focus:ring-[#19B2E7] focus:outline-none"
                       autoFocus
                     />

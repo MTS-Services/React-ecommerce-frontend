@@ -20,7 +20,7 @@ const NewsletterPopup = () => {
         <div className="bg-opacity-30 fixed inset-0 z-50 flex items-center justify-center bg-black/70">
           {/* Modal content */}
           <div
-            className="relative grid w-11/12 grid-cols-1 gap-4 rounded-lg bg-white p-6 shadow-lg md:w-3/4 md:grid-cols-2 lg:w-1/2 xl:w-1/3"
+            className="relative grid w-11/12 grid-cols-1 gap-4 rounded-lg bg-white shadow-lg md:w-3/4 md:grid-cols-2 lg:w-1/2 xl:w-1/3"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
@@ -32,16 +32,16 @@ const NewsletterPopup = () => {
             </button>
 
             {/* Left Column - Image */}
-            <div className="flex h-84 w-full items-center justify-center">
+            <div className="flex items-center justify-center">
               <img
-                src="/public/img/banner1.png"
+                src="/public/img/products/11_1.jpg"
                 alt="Fruit"
-                className="h-full w-full rounded-md object-cover"
+                className="h-full w-full rounded-l object-contain"
               />
             </div>
 
             {/* Right Column - Newsletter Form */}
-            <div className="flex flex-col items-start justify-center">
+            <div className="flex flex-col items-start justify-center p-4 md:p-8">
               <h2 className="mb-2 text-2xl font-semibold">Newsletter</h2>
               <p className="text-md mb-4 text-gray-600">
                 Subscribe to Masterkart to stay updated.
